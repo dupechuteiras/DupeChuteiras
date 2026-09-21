@@ -1701,6 +1701,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <span class="mc-brand">${product.brand}</span>
         <p class="mc-name">${product.model}</p>
         ${product.color ? `<span class="mc-color">${product.color}</span>` : ''}
+        ${product.size ? `<span class="mc-color">Tamanho: ${product.size}</span>` : ''}
         <div class="mini-cart-added">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
           Adicionado ao carrinho
@@ -1723,27 +1724,28 @@ document.addEventListener('DOMContentLoaded', function () {
     openCart();
   });
 
-  function addToCart(id) {
+  function addToCart(id, size) {
     const product = PRODUCT_INDEX[id];
     if (!product) return;
     const cart = loadCart();
-    const existing = cart.find(i => i.id === id);
+    const cartKey = size ? `${id}__${size}` : id;
+    const existing = cart.find(i => (i.cartKey || i.id) === cartKey);
     if (existing) existing.qty += 1;
-    else cart.push({ ...product, qty: 1 });
+    else cart.push({ ...product, size, cartKey, qty: 1 });
     saveCart(cart);
     renderCart();
-    showMiniCart(product);
+    showMiniCart({ ...product, size });
   }
-  function removeFromCart(id) {
-    saveCart(loadCart().filter(i => i.id !== id));
+  function removeFromCart(cartKey) {
+    saveCart(loadCart().filter(i => (i.cartKey || i.id) !== cartKey));
     renderCart();
   }
-  function changeQty(id, delta) {
+  function changeQty(cartKey, delta) {
     const cart = loadCart();
-    const item = cart.find(i => i.id === id);
+    const item = cart.find(i => (i.cartKey || i.id) === cartKey);
     if (!item) return;
     item.qty += delta;
-    const filtered = item.qty <= 0 ? cart.filter(i => i.id !== id) : cart;
+    const filtered = item.qty <= 0 ? cart.filter(i => (i.cartKey || i.id) !== cartKey) : cart;
     saveCart(filtered);
     renderCart();
   }
@@ -1762,6 +1764,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cartBody.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione chuteiras para continuar.</div>';
     } else {
       cartBody.innerHTML = cart.map(item => {
+        const key = item.cartKey || item.id;
         const media = item.img
           ? `<img src="${item.img}" alt="${item.brand} ${item.model}" onerror="imgFallback(this)">`
           : `<div style="width:64px;height:64px;border-radius:6px;background:var(--navy);flex-shrink:0;"></div>`;
@@ -1773,15 +1776,16 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="ci-brand">${item.brand}</span>
               <span class="ci-name">${item.model}</span>
               ${item.color ? `<span class="ci-color">${item.color}</span>` : ''}
+              ${item.size ? `<span class="ci-color">Tamanho: ${item.size}</span>` : ''}
               <div class="cart-item-row">
                 <div class="qty-ctrl">
-                  <button type="button" data-qty-minus="${item.id}">−</button>
+                  <button type="button" data-qty-minus="${key}">−</button>
                   <span>${item.qty}</span>
-                  <button type="button" data-qty-plus="${item.id}">+</button>
+                  <button type="button" data-qty-plus="${key}">+</button>
                 </div>
                 <span class="cart-item-price">R$ ${formatBRL(subtotal)}</span>
               </div>
-              <button type="button" class="cart-remove" data-remove="${item.id}">Remover</button>
+              <button type="button" class="cart-remove" data-remove="${key}">Remover</button>
             </div>
           </div>`;
       }).join('');
@@ -1804,9 +1808,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const addBtn = e.target.closest('[data-add]');
     const buyBtn = e.target.closest('[data-buy]');
     const card = e.target.closest('.card');
-    if (addBtn) addToCart(addBtn.dataset.add);
-    if (buyBtn) quickBuy(buyBtn.dataset.buy);
-    if (card && !addBtn && !buyBtn) openProductModal(card.querySelector('[data-product-id]')?.dataset.productId);
+
+    // Tanto "+ Carrinho" quanto "Comprar" abrem o modal para escolher o tamanho primeiro,
+    // igual acontece ao clicar em cima da foto/card do produto.
+    if (addBtn) { openProductModal(addBtn.dataset.add); return; }
+    if (buyBtn) { openProductModal(buyBtn.dataset.buy); return; }
+    if (card) { openProductModal(card.querySelector('[data-product-id]')?.dataset.productId); return; }
 
     const sizeBtn = e.target.closest('.size-btn');
     if (sizeBtn) {
@@ -1849,13 +1856,17 @@ document.addEventListener('DOMContentLoaded', function () {
   
   function quickBuyFromModal() {
     if (!currentProductId) return;
-    quickBuy(currentProductId);
+    const selectedSize = document.querySelector('#sizeGrid .size-btn.selected');
+    if (!selectedSize) { showToast('Selecione o tamanho antes de continuar.'); return; }
+    quickBuy(currentProductId, selectedSize.dataset.size);
     closeProductModal();
   }
   
   function addToCartFromModal() {
     if (!currentProductId) return;
-    addToCart(currentProductId);
+    const selectedSize = document.querySelector('#sizeGrid .size-btn.selected');
+    if (!selectedSize) { showToast('Selecione o tamanho antes de continuar.'); return; }
+    addToCart(currentProductId, selectedSize.dataset.size);
     closeProductModal();
   }
 
@@ -1882,36 +1893,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (confirm('Esvaziar o carrinho?')) clearCart();
   });
 
-  // ---- Envio para o WhatsApp (texto + imagem quando possível) ----
-  async function urlToFile(url, filename) {
-    try {
-      const res = await fetch(url);
-      const blob = await res.blob();
-      return new File([blob], filename, { type: blob.type || 'image/jpeg' });
-    } catch (e) { return null; }
-  }
-
-  async function sendToWhatsApp(items, message) {
-    const files = (await Promise.all(
-      items.filter(i => i.img).map((i, idx) => urlToFile(i.img, `chuteira-${idx}.jpg`))
-    )).filter(Boolean);
-
-    if (files.length && navigator.canShare && navigator.canShare({ files })) {
-      try {
-        await navigator.share({ files, text: message, title: 'Dupe Chuteiras' });
-        return;
-      } catch (e) {
-        if (e && e.name === 'AbortError') return; // usuário cancelou o compartilhamento
-        // se falhar, cai no link direto do WhatsApp abaixo
-      }
-    }
+  // ---- Envio para o WhatsApp: sempre abre a conversa direto, sem o menu de compartilhar do sistema ----
+  function sendToWhatsApp(items, message) {
     window.open(`https://wa.me/${WHATS_NUM}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   }
 
-  function quickBuy(id) {
+  function quickBuy(id, size) {
     const product = PRODUCT_INDEX[id];
     if (!product) return;
-    const message = `Olá! Tenho interesse na chuteira ${product.brand} ${product.model}${product.color ? ' — ' + product.color : ''} (R$ ${product.price}).`;
+    const sizeText = size ? ` — Tamanho ${size}` : '';
+    const message = `Olá! Tenho interesse na chuteira ${product.brand} ${product.model}${product.color ? ' — ' + product.color : ''}${sizeText} (R$ ${product.price}).`;
     sendToWhatsApp([product], message);
   }
 
@@ -1919,7 +1910,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cart = loadCart();
     if (cart.length === 0) { showToast('Seu carrinho está vazio.'); return; }
     const lines = cart.map(i =>
-      `• ${i.qty}x ${i.brand} ${i.model}${i.color ? ' — ' + i.color : ''} — R$ ${formatBRL(priceToNumber(i.price) * i.qty)}`
+      `• ${i.qty}x ${i.brand} ${i.model}${i.color ? ' — ' + i.color : ''}${i.size ? ' — Tam. ' + i.size : ''} — R$ ${formatBRL(priceToNumber(i.price) * i.qty)}`
     );
     const total = cart.reduce((s, i) => s + priceToNumber(i.price) * i.qty, 0);
     const message = `Olá! Quero fazer o seguinte pedido na Dupe Chuteiras:\n\n${lines.join('\n')}\n\nTotal: R$ ${formatBRL(total)}`;
