@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dupe Chuteiras — Todas as marcas, todos os modelos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #000066;
+    --navy-deep: #00003d;
+    --navy-soft: #101090;
+    --gold: #FFCC00;
+    --gold-dark: #E0B400;
+    --ink: #14123A;
+    --paper: #F5F5FA;
+    --paper-2: #ECEBF6;
+    --line: #DBDAEA;
+    --white: #FFFFFF;
+    --max: 1440px;
+  }
+
+  *{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  button, a{ touch-action: manipulation; }
+  /* Safari Mobile às vezes ignora toques em elementos sem cursor explícito */
+  button, a, [onclick], input[type="checkbox"], label{ cursor: pointer; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky; top:0; z-index: 50;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+  }
+  header .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:12px; padding-bottom:12px; gap: 14px; flex-wrap: nowrap;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand img{ height:40px; width:auto; border-radius:0; flex-shrink:0; }
+  nav.mainnav{ display:flex; gap:28px; }
+  nav.mainnav a{
+    text-decoration:none; color:var(--white); font-weight:600; font-size:0.95rem;
+    padding: 6px 2px; border-bottom: 2px solid transparent;
+    transition: border-color .2s ease, color .2s ease;
+  }
+  nav.mainnav a:hover{ border-color: var(--gold); color: var(--gold); }
+  .header-cta{
+    background: var(--gold); color: var(--navy-deep); text-decoration:none;
+    font-weight:800; padding: 10px 20px; border-radius: 4px 14px 4px 14px;
+    font-size:0.9rem; white-space:nowrap;
+    box-shadow: 0 3px 0 var(--gold-dark);
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .header-cta:hover{ transform: translateY(1px); box-shadow: 0 2px 0 var(--gold-dark); }
+  .header-cta svg{ width:16px; height:16px; }
+
+  /* ---------- Menu mobile (hamburger) ---------- */
+  .menu-toggle-btn{
+    display:none; background: rgba(255,255,255,0.08); color: var(--white); border:none; cursor:pointer;
+    width:42px; height:42px; border-radius:50%; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .menu-toggle-btn:hover{ background: rgba(255,255,255,0.18); }
+  .menu-toggle-btn svg{ width:22px; height:22px; }
+  .mobile-nav-panel{
+    display:none; flex-direction:column;
+    background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .mobile-nav-panel.open{ display:flex; }
+  .mobile-nav-panel a{
+    color: var(--white); text-decoration:none; font-weight:700; font-size:0.95rem;
+    padding: 15px 28px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-nav-panel a:active{ background: rgba(255,255,255,0.07); }
+
+  @media (max-width: 880px){
+    nav.mainnav{ display:none; }
+    .menu-toggle-btn{ display:flex; }
+  }
+  @media (max-width: 480px){
+    .header-cta .header-cta-text{ display:none; }
+    .header-cta{ width:42px; height:42px; padding:0; border-radius:50%; justify-content:center; box-shadow:none; }
+    .header-cta svg{ width:19px; height:19px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy-deep) 65%);
+    color: var(--white);
+    overflow: hidden;
+    border-bottom: 6px solid var(--gold);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: radial-gradient(var(--gold) 1.8px, transparent 1.8px);
+    background-size: 26px 26px;
+    opacity: 0.08;
+    pointer-events:none;
+  }
+  .hero .wrap{
+    position:relative;
+    display:grid; grid-template-columns: 1.15fr 0.85fr;
+    align-items:center; gap: 40px;
+    padding-top: 72px; padding-bottom: 64px;
+  }
+  .hero h1{
+    font-family:'Racing Sans One', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4.1rem);
+    line-height: 0.98;
+    letter-spacing: 0.5px;
+    margin: 0 0 20px;
+  }
+  .hero h1 em{ font-style:normal; color: var(--gold); }
+  .hero p.lead{
+    font-size: 1.1rem; max-width: 46ch; color: #D7D6F0; margin: 0 0 30px;
+  }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn-primary{
+    background: var(--gold); color: var(--navy-deep); text-decoration:none;
+    font-weight:800; padding: 15px 26px; border-radius: 4px 16px 4px 16px;
+    box-shadow: 0 4px 0 var(--gold-dark); font-size:1rem;
+  }
+  .btn-primary:hover{ transform: translateY(2px); box-shadow: 0 2px 0 var(--gold-dark); }
+  .btn-ghost{
+    border: 2px solid rgba(255,255,255,0.35); color: var(--white); text-decoration:none;
+    font-weight:700; padding: 13px 24px; border-radius: 4px 16px 4px 16px;
+    font-size:1rem; display:inline-flex; align-items:center; gap:9px;
+  }
+  .btn-ghost:hover{ border-color: var(--gold); color: var(--gold); }
+  .btn-ghost svg{ width:18px; height:18px; }
+
+  .hero-art{ position:relative; display:flex; align-items:center; justify-content:center; }
+  .hero-art svg{ width: 100%; max-width: 380px; filter: drop-shadow(0 18px 30px rgba(0,0,0,0.45)); }
+
+  .hero-stats{ display:flex; gap: 34px; margin-top: 42px; flex-wrap: wrap; }
+  .hero-stats div strong{
+    display:block; font-family:'Racing Sans One', sans-serif; font-size:1.6rem; color: var(--gold);
+  }
+  .hero-stats div span{ font-size:0.85rem; color:#B9B8DC; }
+
+  /* ---------- Brands strip ---------- */
+  .brands-strip{ background: var(--white); border-bottom: 1px solid var(--line); padding: 34px 0; }
+  .brands-strip .heading{ text-align:center; max-width: 640px; margin: 0 auto 24px; }
+  .brands-strip h2{
+    font-family:'Racing Sans One', sans-serif; font-size: 1.5rem; letter-spacing:0.4px;
+    margin: 0 0 8px; color: var(--navy);
+  }
+  .brands-strip p{ margin:0; color:#55547a; font-size:0.98rem; }
+  .brand-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap: 12px; }
+  .brand-chips span{
+    border: 2px solid var(--navy); color: var(--navy);
+    font-weight:800; font-size: 0.92rem; padding: 9px 20px; border-radius: 999px;
+    letter-spacing: 0.3px;
+  }
+
+
+  /* ---------- Catalog ---------- */
+  .catalog{ padding: 60px 0 90px; }
+  .catalog-head{ max-width: 620px; margin: 0 0 30px; }
+  .catalog-head h2{
+    font-family:'Racing Sans One', sans-serif; font-size: 2rem; margin:0 0 10px; color: var(--navy);
+  }
+  .catalog-head p{ margin:0; color:#55547a; }
+
+  .segment{ display:flex; gap:0; margin-bottom: 26px; border-bottom: 3px solid var(--line); flex-wrap:wrap; }
+  .segment button{
+    font-family:'Inter', sans-serif;
+    background:none; border:none; cursor:pointer;
+    font-weight:800; font-size:1.05rem; color:#8f8eb0;
+    padding: 12px 6px; margin-right: 34px;
+    border-bottom: 4px solid transparent; margin-bottom:-3px;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .segment button.active{ color: var(--navy); border-color: var(--gold); }
+
+  .subtabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 30px; }
+  .subtabs button{
+    font-family:'Inter', sans-serif;
+    background: var(--white); border: 2px solid var(--line); cursor:pointer;
+    font-weight:700; font-size:0.9rem; color:#4c4b6e;
+    padding: 9px 18px; border-radius: 999px;
+    transition: all .18s ease;
+  }
+  .subtabs button.active{ background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .subtabs button:hover:not(.active){ border-color: var(--navy); }
+
+  .product-grid{
+    display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px;
+  }
+  .card{
+    background: var(--white); border: 1px solid var(--line);
+    overflow:hidden; display:flex; flex-direction:column;
+    transition: transform .18s ease, box-shadow .18s ease;
+    cursor: pointer;
+  }
+  .card:hover{ transform: translateY(-4px); box-shadow: 0 14px 26px rgba(11,10,85,0.12); }
+  .card-media{
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    position: relative;
+  }
+  .card-media img{ width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+  .card-media svg{ width: 62%; flex-shrink: 0; }
+  .card-media .tag{
+    position:absolute; top:10px; left:10px;
+    background: var(--gold); color: var(--navy-deep);
+    font-size:0.68rem; font-weight:800; letter-spacing:0.4px;
+    padding: 4px 9px; border-radius: 3px;
+  }
+  .card-body{ padding: 16px 16px 18px; display:flex; flex-direction:column; gap:6px; flex:1; }
+  .card-body .brand-name{ font-size:0.72rem; font-weight:800; color: var(--gold-dark); letter-spacing:0.5px; }
+  .card-body h3{ margin:0; font-size:1.02rem; line-height:1.25; color: var(--ink); }
+  .card-body .price-row{
+    margin-top:auto; display:flex; align-items:center; justify-content:space-between; padding-top:10px;
+  }
+
+  /* ---------- Modal de Detalhes do Produto ---------- */
+  .modal-overlay{
+    position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 100;
+    display: none; align-items: center; justify-content: center;
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  }
+  .modal-overlay.open{ display: flex; }
+  
+  .modal-content{
+    background: var(--white); border-radius: 12px;
+    max-width: 800px; width: 90vw; max-height: 90vh;
+    overflow-y: auto; position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+    padding: 30px;
+    animation: modalSlideIn 0.3s ease;
+  }
+  
+  @keyframes modalSlideIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .modal-close{
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; font-size: 28px; cursor: pointer;
+    color: var(--ink); z-index: 10;
+    width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    transition: color 0.2s;
+  }
+  .modal-close:hover{ color: var(--navy); }
+  
+  .modal-media{
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    border-radius: 8px; aspect-ratio: 1; overflow: hidden;
+  }
+  .modal-media img{
+    width: 100%; height: 100%; object-fit: cover; flex-shrink: 0;
+  }
+  .modal-media svg{ width: 70%; }
+  
+  .modal-info h2{
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 1.8rem; margin: 0 0 8px; color: var(--navy);
+  }
+  .modal-info .brand-label{
+    font-size: 0.8rem; font-weight: 800; color: var(--gold-dark);
+    letter-spacing: 0.5px; margin-bottom: 12px; display: block;
+  }
+  .modal-info .price-tag{
+    font-size: 2rem; font-weight: 800; color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .modal-info .discount-note{
+    font-size: 0.85rem; color: #999; margin-bottom: 20px;
+  }
+  
+  .size-section h3{
+    font-size: 0.95rem; font-weight: 800; color: var(--ink);
+    margin: 24px 0 12px;
+  }
+  .size-grid{
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+    margin-bottom: 24px;
+  }
+  .size-btn{
+    border: 2px solid var(--line); background: var(--white);
+    padding: 12px 8px; border-radius: 6px; cursor: pointer;
+    font-weight: 600; font-size: 0.9rem; color: var(--ink);
+    transition: all 0.2s ease;
+  }
+  .size-btn:hover{ border-color: var(--navy); }
+  .size-btn.selected{
+    background: var(--navy); color: var(--white); border-color: var(--navy);
+  }
+  
+  .color-section h3{
+    font-size: 0.95rem; font-weight: 800; color: var(--ink);
+    margin: 20px 0 12px;
+  }
+  .color-label{
+    display: inline-block; font-size: 0.85rem; color: #666;
+    background: var(--paper); padding: 4px 8px; border-radius: 4px;
+  }
+  
+  .modal-actions{
+    display: flex; gap: 12px; margin-top: 24px; flex-direction: column;
+  }
+  .btn-buy-now{
+    background: var(--gold); color: var(--navy-deep);
+    border: none; padding: 16px 24px; border-radius: 4px 14px 4px 14px;
+    font-weight: 800; font-size: 1rem; cursor: pointer;
+    box-shadow: 0 4px 0 var(--gold-dark);
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .btn-buy-now:hover{
+    transform: translateY(2px); box-shadow: 0 2px 0 var(--gold-dark);
+  }
+  .btn-add-cart{
+    background: var(--white); color: var(--navy);
+    border: 2px solid var(--navy); padding: 14px 24px;
+    border-radius: 4px 14px 4px 14px; font-weight: 800;
+    font-size: 1rem; cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .btn-add-cart:hover{
+    background: var(--navy); color: var(--white);
+  }
+  
+  .product-description{
+    margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 0.9rem; color: #666; line-height: 1.5;
+  }
+  
+  @media (max-width: 720px){
+    .modal-content{
+      grid-template-columns: 1fr; gap: 20px; padding: 20px;
+    }
+    .size-grid{
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  .card-body .price{ font-weight:800; font-size:1.15rem; color: var(--navy); }
+  .buy-btn{
+    background: var(--navy); color: var(--white); border:none; cursor:pointer;
+    font-weight:700; font-size:0.82rem; padding: 8px 14px; border-radius: 3px 10px 3px 10px;
+    text-decoration:none; display:inline-block;
+  }
+  .buy-btn:hover{ background: var(--gold); color: var(--navy-deep); }
+
+  .missing-photos{
+    grid-column: 1/-1; border: 2px dashed var(--line); border-radius: 8px;
+    padding: 22px; text-align:center; color:#6d6c92; font-size:0.9rem;
+  }
+
+  /* ---------- Trust strip ---------- */
+  .trust{ background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 40px 0; }
+  .trust .wrap{ display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 24px; }
+  .trust-item{ display:flex; gap:14px; align-items:flex-start; }
+  .trust-item svg{ width:30px; height:30px; flex-shrink:0; color: var(--navy); }
+  .trust-item h4{ margin:0 0 4px; font-size:0.98rem; color: var(--navy); }
+  .trust-item p{ margin:0; font-size:0.85rem; color:#5c5b7d; }
+
+  /* ---------- Footer ---------- */
+  footer{ background: var(--navy-deep); color:#C9C8E6; padding: 50px 0 26px; }
+  footer .wrap{ display:grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 36px; }
+  .foot-brand{ display:flex; align-items:center; gap:12px; margin-bottom: 14px; }
+  .foot-brand img{ height:34px; width:auto; border-radius:0; flex-shrink:0; }
+  .foot-brand strong{ color:var(--white); font-family:'Racing Sans One', sans-serif; font-size:1.1rem; letter-spacing:0.4px; }
+  footer p{ font-size:0.88rem; line-height:1.6; margin:0 0 8px; }
+  footer h5{ color: var(--gold); font-size:0.85rem; margin:0 0 14px; letter-spacing:0.3px; }
+  footer ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; }
+  footer ul a{ text-decoration:none; font-size:0.88rem; color:#C9C8E6; }
+  footer ul a:hover{ color: var(--gold); }
+  .foot-bottom{
+    max-width: var(--max); margin: 34px auto 0; padding: 18px 20px 0; border-top: 1px solid rgba(255,255,255,0.1);
+    font-size:0.78rem; color:#8f8db4; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  @media (max-width: 780px){
+    .hero .wrap{ grid-template-columns: 1fr; padding-top:44px; }
+    .hero-art{ order:-1; }
+    footer .wrap{ grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px){
+    .brand img{ height:32px; width:auto; flex-shrink:0; }
+    .header-cta{ padding: 9px 12px; font-size:0.78rem; gap:6px; }
+    .header-cta svg{ width:15px; height:15px; flex-shrink:0; }
+    .segment{ gap: 4px 22px; }
+    .segment button{ font-size:0.92rem; padding: 10px 4px; min-height:44px; }
+    .subtabs button{ padding: 10px 16px; min-height:40px; }
+    .buy-btn{ padding: 10px 16px; min-height:40px; display:flex; align-items:center; justify-content:center; }
+    .hero-actions .btn-primary, .hero-actions .btn-ghost{ width:100%; justify-content:center; }
+    .segment{ flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .segment::-webkit-scrollbar{ display:none; }
+    .segment button{ white-space: nowrap; margin-right: 20px; }
+  }
+
+  /* ---------- Filtros (estilo compacto) ---------- */
+  .filter-trigger-wrap{ position: relative; margin-bottom: 20px; }
+  .filter-bar-top{ display:flex; align-items:center; gap:12px; }
+  .filter-toggle-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background: var(--white); border: 2px solid var(--line); color: var(--ink);
+    font-family:'Inter', sans-serif; font-weight:700; font-size:0.86rem;
+    padding: 8px 14px; border-radius: 999px; cursor:pointer;
+  }
+  .filter-toggle-btn:hover, .filter-toggle-btn.active{ border-color: var(--navy); }
+  .filter-toggle-btn svg{ width:15px; height:15px; }
+  .filter-active-badge{
+    background: var(--navy); color:var(--white); font-size:0.68rem; font-weight:800;
+    min-width:17px; height:17px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; padding:0 3px;
+  }
+  .filter-count-text{ font-size:0.8rem; color:#6d6c92; }
+
+  .filter-panel{
+    display:none; position:absolute; top: calc(100% + 8px); left:0; z-index: 30;
+    background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(10,10,60,0.16); width: 260px; padding: 6px 0 10px;
+  }
+  .filter-panel.open{ display:block; }
+  .filter-section + .filter-section{ border-top: 1px solid var(--line); }
+  .filter-section-head{
+    width:100%; display:flex; align-items:center; justify-content:space-between;
+    background:none; border:none; cursor:pointer; padding: 12px 16px;
+    font-family:'Inter', sans-serif; font-weight:800; font-size:0.88rem; color: var(--ink);
+  }
+  .filter-section-head .chev{ width:12px; height:12px; transition: transform .15s ease; }
+  .filter-section.collapsed .chev{ transform: rotate(180deg); }
+  .filter-section.collapsed .filter-section-body{ display:none; }
+  .filter-section-body{ padding: 0 16px 12px; }
+  .filter-check{
+    display:flex; align-items:center; gap:9px; padding: 6px 2px; font-size:0.86rem; color:#3c3b5c; cursor:pointer;
+  }
+  .filter-check input{ width:16px; height:16px; accent-color: var(--navy); cursor:pointer; }
+  .colors-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px 6px; }
+  .swatch-btn{
+    display:flex; flex-direction:column; align-items:center; gap:5px;
+    background:none; border:none; cursor:pointer; padding:2px; font-family:'Inter', sans-serif;
+  }
+  .swatch{
+    width:30px; height:30px; border-radius:50%; border: 1px solid var(--line);
+    box-shadow: inset 0 0 0 2px var(--white);
+  }
+  .swatch-btn.selected .swatch{ box-shadow: inset 0 0 0 2px var(--white), 0 0 0 2px var(--navy); }
+  .swatch-label{ font-size:0.68rem; color:#4c4b6e; text-align:center; line-height:1.1; }
+  .filter-clear-link{
+    display:block; width:100%; text-align:center; background:none; border:none; cursor:pointer;
+    color: var(--navy); font-weight:700; font-size:0.82rem; padding: 10px 16px 2px;
+  }
+  .filter-clear-link:hover{ text-decoration: underline; }
+  .no-results{
+    grid-column: 1/-1; text-align:center; padding: 40px 20px; color:#6d6c92;
+    border: 2px dashed var(--line); border-radius: 10px;
+  }
+
+  /* ---------- Card action row ---------- */
+  .card-actions{ display:flex; gap:8px; margin-top:auto; padding-top:10px; }
+  .card-actions .price-col{ display:flex; flex-direction:column; margin-right:auto; }
+  .card-actions .price{ font-weight:800; font-size:1.1rem; color: var(--navy); }
+  .btn-add{
+    background: var(--white); color: var(--navy); border: 2px solid var(--navy); cursor:pointer;
+    font-weight:700; font-size:0.78rem; padding: 8px 12px; border-radius: 3px 10px 3px 10px;
+  }
+  .btn-add:hover{ background: var(--navy); color: var(--white); }
+  .btn-buy{
+    background: var(--navy); color: var(--white); border:none; cursor:pointer;
+    font-weight:700; font-size:0.78rem; padding: 8px 12px; border-radius: 3px 10px 3px 10px;
+  }
+  .btn-buy:hover{ background: var(--gold); color: var(--navy-deep); }
+  .card-body .price-row{ flex-wrap:wrap; }
+
+  /* ---------- Ícone de carrinho no header ---------- */
+  .header-cart-wrap{ position: relative; }
+  .header-cart-btn{
+    position: relative; background: rgba(255,255,255,0.08); color: var(--white); border: none; cursor:pointer;
+    width: 42px; height: 42px; border-radius: 50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .header-cart-btn:hover{ background: rgba(255,255,255,0.18); }
+  .header-cart-btn svg{ width:22px; height:22px; }
+  .header-cart-btn .cart-badge{
+    position:absolute; top:-2px; right:-2px; background: var(--gold); color: var(--navy-deep);
+    font-size:0.68rem; font-weight:800; min-width:18px; height:18px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; padding:0 3px;
+    border: 2px solid var(--navy);
+  }
+
+  /* ---------- Mini-carrinho (pop-up ao adicionar) ---------- */
+  .mini-cart{
+    position:absolute; top: calc(100% + 12px); right:0; z-index: 110;
+    background: var(--white); border-radius: 12px; box-shadow: 0 16px 34px rgba(0,0,40,0.28);
+    width: 300px; max-width: 88vw; padding: 16px; display:none;
+  }
+  .mini-cart.show{ display:block; }
+  .mini-cart-item{ display:flex; gap:12px; align-items:flex-start; }
+  .mini-cart-item img{ width:56px; height:56px; object-fit:cover; border-radius:6px; flex-shrink:0; }
+  .mini-cart-item .mc-media-fallback{ width:56px; height:56px; border-radius:6px; background: var(--navy); flex-shrink:0; }
+  .mini-cart-info{ flex:1; min-width:0; }
+  .mini-cart-info .mc-brand{ font-size:0.66rem; font-weight:800; color: var(--gold-dark); letter-spacing:0.4px; }
+  .mini-cart-info .mc-name{ font-size:0.88rem; font-weight:700; color: var(--ink); line-height:1.25; margin: 1px 0; }
+  .mini-cart-info .mc-color{ font-size:0.76rem; color:#6d6c92; }
+  .mini-cart-added{ font-size:0.76rem; color:#1E9E4B; font-weight:700; margin-top:4px; display:flex; align-items:center; gap:5px; }
+  .mini-cart-added svg{ width:13px; height:13px; }
+  .mini-cart-total{
+    display:flex; justify-content:space-between; align-items:center; margin: 14px 0 12px;
+    padding-top:12px; border-top: 1px solid var(--line); font-weight:800; color: var(--navy); font-size:0.95rem;
+  }
+  .mini-cart-goto{
+    width:100%; background: var(--navy); color: var(--white); border:none; cursor:pointer;
+    font-weight:800; padding: 11px; border-radius: 4px 12px 4px 12px; font-size:0.88rem;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .mini-cart-goto:hover{ background: var(--gold); color: var(--navy-deep); }
+  .mini-cart-goto svg{ width:16px; height:16px; }
+
+  /* ---------- Cart drawer ---------- */
+  .cart-overlay{
+    position: fixed; inset:0; background: rgba(10,10,40,0.5); z-index: 95;
+    opacity:0; pointer-events:none; transition: opacity .2s ease;
+  }
+  .cart-overlay.open{ opacity:1; pointer-events:auto; }
+  .cart-drawer{
+    position: fixed; top:0; right:0; bottom:0; width: min(420px, 100%);
+    background: var(--paper); z-index: 96; display:flex; flex-direction:column;
+    transform: translateX(100%); transition: transform .25s ease;
+    box-shadow: -8px 0 24px rgba(0,0,30,0.25);
+    pointer-events: none;
+  }
+  .cart-drawer.open{ transform: translateX(0); pointer-events: auto; }
+  .cart-head{
+    background: var(--navy); color: var(--white); padding: 18px 20px;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom: 3px solid var(--gold);
+  }
+  .cart-head h3{ margin:0; font-family:'Racing Sans One', sans-serif; font-size:1.2rem; letter-spacing:0.4px; }
+  .cart-close{ background:none; border:none; color: var(--white); font-size:1.4rem; cursor:pointer; line-height:1; }
+  .cart-body{ flex:1; overflow-y:auto; padding: 16px 20px; display:flex; flex-direction:column; gap:14px; }
+  .cart-empty{ text-align:center; color:#6d6c92; padding: 40px 10px; }
+  .cart-item{ display:flex; gap:12px; background: var(--white); border:1px solid var(--line); border-radius:8px; padding:10px; }
+  .cart-item img{ width:64px; height:64px; object-fit:cover; border-radius:6px; flex-shrink:0; }
+  .cart-item-info{ flex:1; display:flex; flex-direction:column; gap:4px; min-width:0; }
+  .cart-item-info .ci-brand{ font-size:0.68rem; font-weight:800; color: var(--gold-dark); letter-spacing:0.4px; }
+  .cart-item-info .ci-name{ font-size:0.86rem; font-weight:700; line-height:1.25; }
+  .cart-item-info .ci-color{ font-size:0.78rem; color:#6d6c92; }
+  .cart-item-row{ display:flex; align-items:center; justify-content:space-between; margin-top:auto; gap:8px; }
+  .qty-ctrl{ display:flex; align-items:center; gap:6px; }
+  .qty-ctrl button{
+    width:24px; height:24px; border-radius:50%; border: 2px solid var(--line); background: var(--white);
+    cursor:pointer; font-weight:800; line-height:1; color: var(--navy);
+  }
+  .qty-ctrl span{ font-weight:700; font-size:0.88rem; min-width:16px; text-align:center; }
+  .cart-item-price{ font-weight:800; color: var(--navy); font-size:0.9rem; }
+  .cart-remove{ background:none; border:none; color:#b34747; font-size:0.75rem; font-weight:700; cursor:pointer; padding:0; }
+  .cart-foot{ border-top: 2px solid var(--line); padding: 16px 20px 20px; background: var(--white); }
+  .cart-total-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-weight:800; font-size:1.05rem; color: var(--navy); }
+  .cart-checkout{
+    width:100%; background: var(--gold); color: var(--navy-deep); border:none; cursor:pointer;
+    font-weight:800; padding: 14px; border-radius: 4px 14px 4px 14px; font-size:0.98rem;
+    box-shadow: 0 3px 0 var(--gold-dark); display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .cart-checkout:hover{ transform: translateY(1px); box-shadow: 0 2px 0 var(--gold-dark); }
+  .cart-checkout svg{ width:18px; height:18px; }
+  .cart-clear{ width:100%; background:none; border:none; color:#6d6c92; font-size:0.8rem; font-weight:700; cursor:pointer; margin-top:10px; }
+  .cart-clear:hover{ color:#b34747; }
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position: fixed; left:50%; bottom: 96px; transform: translateX(-50%) translateY(20px);
+    background: var(--navy-deep); color: var(--white); padding: 12px 20px; border-radius: 8px;
+    font-size:0.88rem; font-weight:600; z-index: 120; opacity:0; pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display:flex; align-items:center; gap:8px; max-width: 90vw; text-align:center;
+  }
+  .toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 480px){
+    .filter-panel{ width: 240px; left: auto; right:0; }
+    .mini-cart{ right: -10px; }
+  }
+
+  /* =====================================================================
+     FINALIZAÇÃO DA RESPONSIVIDADE (tablet e celular)
+     — Nada aqui altera regras de desktop já existentes acima; são apenas
+       ajustes adicionais dentro de media queries para telas menores.
+     ===================================================================== */
+
+  /* ---------- Trava global contra rolagem horizontal ---------- */
+  @media (max-width: 768px){
+    html{ overflow-x: hidden; }
+    body{ max-width: 100%; }
+    .wrap{ padding: 0 18px; }
+    img, svg, video{ max-width: 100%; height: auto; }
+    .card-media img{ width: 100%; height: 100%; flex-shrink: 0; } /* mantém o recorte 4:3 do card, só a regra acima não deve sobrescrever isso */
+  }
+  @media (max-width: 480px){
+    .wrap{ padding: 0 16px; }
+  }
+
+  /* ---------- Botões reais de "Adicionar/Comprar" nos cards
+       (o bloco antigo .buy-btn não é usado no HTML — os botões
+       reais são .btn-add e .btn-buy, que ainda não tinham
+       ajuste de toque para mobile) ---------- */
+  @media (max-width: 768px){
+    .btn-add, .btn-buy{
+      min-height: 40px; padding: 9px 14px; font-size: 0.82rem;
+      display:inline-flex; align-items:center; justify-content:center;
+    }
+  }
+  @media (max-width: 480px){
+    .card-actions{ flex-wrap: wrap; row-gap: 10px; }
+    .card-actions .price-col{ width: 100%; margin-right: 0; }
+    .btn-add, .btn-buy{ flex: 1 1 auto; min-height: 44px; font-size: 0.85rem; }
+  }
+
+  /* ---------- Áreas de toque de ícones e controles pequenos ---------- */
+  @media (max-width: 768px){
+    .menu-toggle-btn, .header-cart-btn{ width:44px; height:44px; }
+    .filter-toggle-btn{ min-height:40px; padding:9px 16px; }
+    .swatch-btn{ padding:6px; }
+    .qty-ctrl button{ width:32px; height:32px; font-size:1rem; }
+    .cart-close{
+      width:44px; height:44px; display:flex; align-items:center; justify-content:center;
+    }
+    .modal-close{ width:40px; height:40px; font-size:26px; }
+    .size-btn{ min-height:44px; }
+    .cart-remove, .filter-clear-link{ padding-top:6px; padding-bottom:6px; }
+  }
+
+  /* ---------- Garante que nenhum botão/link fique sobreposto ---------- */
+  @media (max-width: 768px){
+    .card-actions .btn-add, .card-actions .btn-buy{ position: relative; z-index: 1; }
+    .filter-panel{ z-index: 40; }
+    .header-cart-wrap, .filter-trigger-wrap{ position: relative; z-index: 5; }
+    /* alguns filtros (ex: Nike) têm muitos modelos — evita um painel maior que a tela */
+    .filter-panel{ max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  }
+
+  /* ---------- Catálogo: grade de produtos empilhando em telas menores ---------- */
+  @media (max-width: 768px){
+    .product-grid{ grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .catalog{ padding: 44px 0 60px; }
+    .segment button{ font-size: 0.98rem; padding: 11px 4px; min-height: 44px; }
+    .subtabs button{ min-height: 40px; }
+  }
+  @media (max-width: 480px){
+    .product-grid{ grid-template-columns: 1fr; }
+    .card-body h3{ font-size: 0.98rem; }
+  }
+
+  /* ---------- Modal de produto: também considerando 768px ---------- */
+  @media (max-width: 768px){
+    .modal-content{ grid-template-columns: 1fr; gap: 20px; padding: 20px; max-height: 92vh; }
+    .modal-media{ max-height: 46vh; }
+    .size-grid{ grid-template-columns: repeat(5, 1fr); }
+  }
+  @media (max-width: 480px){
+    .modal-content{ padding: 16px; width: 94vw; }
+    .modal-info .price-tag{ font-size: 1.6rem; }
+    .modal-actions{ gap: 10px; }
+  }
+
+  /* ---------- Carrinho: linha de item não quebra em telas estreitas ---------- */
+  @media (max-width: 480px){
+    .cart-item{ flex-wrap: wrap; }
+    .cart-item-row{ flex-wrap: wrap; row-gap: 8px; }
+  }
+
+  /* ---------- Trust / rodapé: empilhamento e centralização no celular ---------- */
+  @media (max-width: 480px){
+    .trust{ padding: 30px 0; }
+    .trust .wrap{ grid-template-columns: 1fr; gap: 20px; }
+    .foot-bottom{ flex-direction: column; text-align: center; gap: 6px; }
+    footer{ padding: 40px 0 22px; }
+  }
+</style>
+</head>
+<body>
+
+<script>
+  // Fallback global para imagens quebradas (ícone de chuteira no lugar da foto)
+  function imgFallback(img) {
+    if (!img || img.dataset.fallbackApplied) return;
+    img.dataset.fallbackApplied = '1';
+    const ph = document.createElement('div');
+    ph.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#000066 0%,#101090 100%);flex-shrink:0;';
+    ph.innerHTML = '<svg viewBox="0 0 120 80" style="width:60%"><use href="#boot"/></svg>';
+    if (img.parentNode) img.replaceWith(ph);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNavPanel = document.getElementById('mobileNavPanel');
+    if (menuToggle && mobileNavPanel) {
+      menuToggle.addEventListener('click', () => {
+        mobileNavPanel.classList.toggle('open');
+      });
+      mobileNavPanel.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => mobileNavPanel.classList.remove('open'));
+      });
+      document.addEventListener('click', (e) => {
+        if (!mobileNavPanel.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
+          mobileNavPanel.classList.remove('open');
+        }
+      });
+    }
+  });
+</script>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras">
+  <div class="cart-head">
+    <h3>Seu carrinho</h3>
+    <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">&times;</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">Seu carrinho está vazio.<br>Adicione chuteiras para continuar.</div>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <button class="cart-checkout" id="cartCheckout">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.7.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.2.9.9-3.1-.2-.3C3.7 14.5 3.2 13 3.2 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.8 8.7-8.6 8.7z"/></svg>
+      Finalizar pedido no WhatsApp
+    </button>
+    <button class="cart-clear" id="cartClear">Esvaziar carrinho</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<header>
+  <div class="wrap">
+    <button type="button" class="menu-toggle-btn" id="menuToggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="brand">
+      <img src="assets/logo-dupe.png" alt="Dupe Chuteiras" onerror="imgFallback(this)">
+    </div>
+    <nav class="mainnav">
+      <a href="#colecao">Coleção</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#confianca">Por que comprar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-cart-wrap">
+      <button class="header-cart-btn" id="cartFab" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
+      </button>
+      <div class="mini-cart" id="miniCart">
+        <div class="mini-cart-item" id="miniCartItem"></div>
+        <div class="mini-cart-total"><span>Total do carrinho</span><span id="miniCartTotal">R$ 0,00</span></div>
+        <button class="mini-cart-goto" id="miniCartGoto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Ir para o carrinho
+        </button>
+      </div>
+    </div>
+    <a class="header-cta" href="https://wa.me/554891168661?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dupe%20Chuteiras%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.7.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.2.9.9-3.1-.2-.3C3.7 14.5 3.2 13 3.2 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.8 8.7-8.6 8.7z"/></svg>
+      <span class="header-cta-text">Fale pelo WhatsApp</span>
+    </a>
+  </div>
+  <nav class="mobile-nav-panel" id="mobileNavPanel">
+    <a href="#colecao">Coleção</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#confianca">Por que comprar</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Chuteira boa<br>é a que faz você<br><em>jogar diferente.</em></h1>
+      <p class="lead">Campo, society ou futsal, a Dupe Chuteiras traz os modelos das marcas que decidem partida — pronto para o seu próximo jogo.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#colecao">Ver coleção</a>
+        <a class="btn-ghost" href="https://wa.me/554891168661?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dupe%20Chuteiras%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.7.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.2.9.9-3.1-.2-.3C3.7 14.5 3.2 13 3.2 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.8 8.7-8.6 8.7z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>5</strong><span>marcas trabalhadas</span></div>
+        <div><strong>3</strong><span>categorias: campo, society e futsal</span></div>
+        <div><strong>100%</strong><span>modelos de qualidade</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/hero-boot.png" alt="Dupe Chuteiras" style="width:100%;max-width:500px;filter:drop-shadow(0 18px 30px rgba(0,0,0,0.45));" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="brands-strip" id="marcas">
+  <div class="wrap">
+    <div class="heading">
+      <h2>Todos os modelos, das maiores marcas do mercado</h2>
+      <p>Trabalhamos com linhas de campo, society e futsal das marcas mais procuradas pelos jogadores.</p>
+    </div>
+    <div class="brand-chips">
+      <span>Nike</span>
+      <span>Adidas</span>
+      <span>Mizuno</span>
+      <span>Puma</span>
+      <span>Joma</span>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="colecao">
+  <div class="wrap">
+    <div class="catalog-head">
+      <h2>Escolha sua categoria</h2>
+      <p>Selecione campo, society ou futsal e depois filtre pela marca para ver os modelos disponíveis.</p>
+    </div>
+
+    <div class="segment" role="tablist">
+      <button class="active" data-cat="campo">Chuteiras de Campo</button>
+      <button data-cat="society">Society</button>
+      <button data-cat="futsal">Futsal</button>
+    </div>
+
+    <!-- CAMPO — R$ 449,99 -->
+    <div class="cat-panel" data-panel="campo">
+      <div class="subtabs" role="tablist">
+        <button class="active" data-sub="nike">Nike</button>
+        <button data-sub="adidas">Adidas</button>
+        <button data-sub="mizuno">Mizuno</button>
+        <button data-sub="puma">Puma</button>
+      </div>
+
+      <div class="product-grid" data-sub-panel="nike"></div>
+      <div class="product-grid" data-sub-panel="adidas" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="mizuno" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="puma" style="display:none;"></div>
+    </div>
+
+    <!-- SOCIETY — R$ 449,99 -->
+    <div class="cat-panel" data-panel="society" style="display:none;">
+      <div class="subtabs" role="tablist">
+        <button class="active" data-sub="nike-so">Nike</button>
+        <button data-sub="adidas-so">Adidas</button>
+        <button data-sub="mizuno-so">Mizuno</button>
+        <button data-sub="puma-so">Puma</button>
+        <button data-sub="joma-so">Joma</button>
+      </div>
+
+      <div class="product-grid" data-sub-panel="nike-so"></div>
+      <div class="product-grid" data-sub-panel="adidas-so" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="mizuno-so" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="puma-so" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="joma-so" style="display:none;"></div>
+    </div>
+
+    <!-- FUTSAL — R$ 419,99 -->
+    <div class="cat-panel" data-panel="futsal" style="display:none;">
+      <div class="subtabs" role="tablist">
+        <button class="active" data-sub="nike-fs">Nike</button>
+        <button data-sub="adidas-fs">Adidas</button>
+        <button data-sub="joma-fs">Joma</button>
+      </div>
+
+      <div class="product-grid" data-sub-panel="nike-fs"></div>
+      <div class="product-grid" data-sub-panel="adidas-fs" style="display:none;"></div>
+      <div class="product-grid" data-sub-panel="joma-fs" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reusable boot icon (placeholder until real product photos are added) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="boot" viewBox="0 0 120 80">
+      <path d="M8 62 C 8 46, 22 34, 42 30 C 55 27, 65 18, 74 9 C 79 4, 88 3, 93 8 C 99 13, 112 26, 118 36 C 124 46, 122 58, 112 64 C 103 70, 86 71, 68 70 L 24 70 C 15 70, 9 68, 8 62 Z" fill="#FFCC00"/>
+      <circle cx="24" cy="74" r="3.4" fill="#F5F5FA"/>
+      <circle cx="36" cy="76" r="3.4" fill="#F5F5FA"/>
+      <circle cx="49" cy="76.5" r="3.4" fill="#F5F5FA"/>
+      <circle cx="62" cy="76" r="3.4" fill="#F5F5FA"/>
+      <path d="M42 30 C 55 27, 65 18, 74 9" fill="none" stroke="#00003d" stroke-width="2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Modal de Detalhes do Produto -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeProductModal()">&times;</button>
+    
+    <div class="modal-media" id="modalMedia">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"></svg>
+    </div>
+    
+    <div class="modal-info">
+      <span class="brand-label" id="modalBrand">MIZUNO</span>
+      <h2 id="modalName">Chuteira Campo</h2>
+      <div class="price-tag" id="modalPrice">R$ 699,99</div>
+      
+      <div class="size-section">
+        <h3>Tamanho</h3>
+        <div class="size-grid" id="sizeGrid"></div>
+      </div>
+      
+      <div class="color-section">
+        <h3>Cor</h3>
+        <span class="color-label" id="modalColor">Preto/Branco</span>
+      </div>
+      
+      <div class="product-description" id="modalDescription">
+        Descrição do produto
+      </div>
+      
+      <div class="modal-actions">
+        <button class="btn-buy-now" onclick="quickBuyFromModal()">Comprar agora</button>
+        <button class="btn-add-cart" onclick="addToCartFromModal()">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // ---- Product data: swap "img" with a real photo path once you send the files ----
+  const WHATS_NUM = "554891168661";
+  const PRICE = { campo: "449,99", society: "449,99", futsal: "419,99" };
+
+  const CATALOG = {
+    nike: { brand: "NIKE", price: PRICE.campo, models: [
+      { name: "Hypervenom Phantom FG — Rosa e Azul",                  img: "products/nike-campo/nike-01.png" },
+      { name: "Hypervenom Phantom FG — Amarelo e Azul",          img: "products/nike-campo/nike-02.png" },
+      { name: "Hypervenom Phantom FG — Laranja e Branco",             img: "products/nike-campo/nike-03.png" },
+      { name: "Hypervenom Phantom FG — Prata, Rosa e Dourado",        img: "products/nike-campo/nike-04.png" },
+      { name: "Hypervenom Phantom FG — Dourado e Amarelo",       img: "products/nike-campo/nike-05.png" },
+      { name: "Hypervenom Phantom FG — Laranja e Preto",              img: "products/nike-campo/nike-06.png" },
+      { name: "Hypervenom Phantom FG — Coral e Amarelo",         img: "products/nike-campo/nike-07.png" },
+      { name: "Premier III FG — Preto, Branco e Dourado",             img: "products/nike-campo/nike-08.png" },
+      { name: "Premier III FG — Branco e Vermelho",                   img: "products/nike-campo/nike-09.png" },
+      { name: "Premier III FG — Branco, Azul e Rosa",                 img: "products/nike-campo/nike-10.png" },
+      { name: "Tiempo Legend 10 Elite FG — Azul e Rosa",              img: "products/nike-campo/nike-11.png" },
+      { name: "Tiempo Legend 10 Elite FG — Branco, Azul e Dourado",   img: "products/nike-campo/nike-12.png" },
+      { name: "Tiempo Legend 10 Elite FG — Preto e Azul",             img: "products/nike-campo/nike-13.png" },
+      { name: "Tiempo Legend 10 Elite FG — Laranja e Preto",          img: "products/nike-campo/nike-14.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Verde e Roxo",        img: "products/nike-campo/nike-15.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Prata e Verde",       img: "products/nike-campo/nike-16.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Amarelo e Preto",    img: "products/nike-campo/nike-17.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Branco e Laranja",         img: "products/nike-campo/nike-18.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Coral",                  img: "products/nike-campo/nike-19.jpg" },
+      { name: "Premier III FG — Prata e Preto",                       img: "products/nike-campo/nike-20.png" },
+
+      { name: "Phantom 6 High Elite FG — Branco, Azul e Rosa",             img: "products/nike-campo-phantom6/p6-01.jpg" },
+      { name: "Phantom 6 Low Elite FG — Marinho, Laranja e Amarelo",  img: "products/nike-campo-phantom6/p6-02.png" },
+      { name: "Phantom 6 High Elite FG — Branco, Preto e Azul",            img: "products/nike-campo-phantom6/p6-03.png" },
+      { name: "Phantom 6 High Elite FG — Roxo, Laranja e Vermelho",          img: "products/nike-campo-phantom6/p6-04.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-05.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-06.png" },
+      { name: "Phantom 6 Low Elite FG — Preto e Coral",                    img: "products/nike-campo-phantom6/p6-07.jpg" },
+      { name: "Phantom 6 Low Elite FG — Grafite e Verde",             img: "products/nike-campo-phantom6/p6-08.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-09.jpg" },
+      { name: "Phantom 6 Low Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantom6/p6-10.png" },
+      { name: "Phantom 6 High Elite FG — Marinho, Laranja e Amarelo", img: "products/nike-campo-phantom6/p6-11.png" },
+      { name: "Phantom 6 Low Elite FG — Azul e Amarelo",        img: "products/nike-campo-phantom6/p6-12.png" },
+      { name: "Phantom 6 Low Elite FG — Coral, Roxo e Azul",            img: "products/nike-campo-phantom6/p6-13.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Preto",                   img: "products/nike-campo-phantom6/p6-14.png" },
+      { name: "Phantom 6 Low Elite FG — Creme, Azul e Amarelo",      img: "products/nike-campo-phantom6/p6-15.png" },
+      { name: "Phantom 6 Low Elite FG — Preto e Laranja",                  img: "products/nike-campo-phantom6/p6-16.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-17.png" },
+      { name: "Phantom 6 Low Elite FG — Azul, Laranja e Vermelho",      img: "products/nike-campo-phantom6/p6-18.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Laranja",     img: "products/nike-campo-phantom6/p6-19.png" },
+      { name: "Phantom 6 Low Elite FG — Cinza e Laranja", img: "products/nike-campo-phantom6/p6-20.png" },
+
+      { name: "Phantom GT2 High Elite FG — Preto e Azul",                    img: "products/nike-campo-phantomgt2/gt2-01.jpg" },
+      { name: "Phantom GT2 High Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantomgt2/gt2-02.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Rosa",           img: "products/nike-campo-phantomgt2/gt2-03.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Preto e Azul",               img: "products/nike-campo-phantomgt2/gt2-04.jpg" },
+      { name: "Phantom GT2 High Elite FG — Verde e Laranja",           img: "products/nike-campo-phantomgt2/gt2-05.jpg" },
+      { name: "Phantom GT2 High Elite FG — Verde e Laranja",     img: "products/nike-campo-phantomgt2/gt2-06.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Laranja",   img: "products/nike-campo-phantomgt2/gt2-07.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Azul e Amarelo",              img: "products/nike-campo-phantomgt2/gt2-08.jpg" },
+      { name: "Phantom GT2 High Elite FG — Creme e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-09.jpg" },
+      { name: "Phantom GT2 High Elite FG — Azul, Preto e Amarelo",     img: "products/nike-campo-phantomgt2/gt2-10.jpg" },
+      { name: "Phantom GT2 High Elite FG — Preto e Dourado",  img: "products/nike-campo-phantomgt2/gt2-11.jpg" },
+      { name: "Phantom GT2 High Elite FG — Branco, Amarelo e Coral",    img: "products/nike-campo-phantomgt2/gt2-12.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Azul, Preto e Amarelo", img: "products/nike-campo-phantomgt2/gt2-13.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Laranja e Amarelo",                img: "products/nike-campo-phantomgt2/gt2-14.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-15.jpg" },
+      { name: "Phantom GT2 High Elite FG — Amarelo e Laranja",               img: "products/nike-campo-phantomgt2/gt2-16.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Verde e Azul",  img: "products/nike-campo-phantomgt2/gt2-17.jpg" },
+      { name: "Phantom GT2 High Elite FG — Azul e Amarelo",      img: "products/nike-campo-phantomgt2/gt2-18.jpg" },
+
+      { name: "Mercurial Superfly 9 Elite FG — Roxo e Preto",                       img: "products/nike-campo-superfly/superfly-01.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco, Azul e Verde",         img: "products/nike-campo-superfly/superfly-02.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Vermelho",                 img: "products/nike-campo-superfly/superfly-03.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-04.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Preto",                img: "products/nike-campo-superfly/superfly-05.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa",                         img: "products/nike-campo-superfly/superfly-06.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Amarelo",                     img: "products/nike-campo-superfly/superfly-07.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Multicor",            img: "products/nike-campo-superfly/superfly-08.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Verde e Roxo",                 img: "products/nike-campo-superfly/superfly-09.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Rosa",                img: "products/nike-campo-superfly/superfly-10.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Verde e Rosa",            img: "products/nike-campo-superfly/superfly-11.png" },
+      { name: "Mercurial Superfly 8 Elite FG — Branco",               img: "products/nike-campo-superfly/superfly-12.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Azul",                     img: "products/nike-campo-superfly/superfly-13.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-14.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Creme e Preto",                     img: "products/nike-campo-superfly/superfly-15.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco, Dourado e Azul",            img: "products/nike-campo-superfly/superfly-16.png" },
+      { name: "Mercurial Superfly 9 Elite FG — Laranja e Preto",                    img: "products/nike-campo-superfly/superfly-17.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Coral e Azul",                    img: "products/nike-campo-superfly/superfly-18.png" },
+      { name: "Mercurial Superfly 10 Elite SE FG — Cinza e Preto",                  img: "products/nike-campo-superfly/superfly-19.png" },
+
+      { name: "Mercurial Vapor 16 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor/vapor-01.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco e Rosa",                        img: "products/nike-campo-vapor/vapor-02.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Azul e Verde",                   img: "products/nike-campo-vapor/vapor-03.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Preto",                         img: "products/nike-campo-vapor/vapor-04.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Coral e Rosa",                       img: "products/nike-campo-vapor/vapor-05.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Amarelo e Branco",                img: "products/nike-campo-vapor/vapor-06.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Azul",              img: "products/nike-campo-vapor/vapor-07.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Amarelo e Laranja",              img: "products/nike-campo-vapor/vapor-08.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Dourado",                              img: "products/nike-campo-vapor/vapor-09.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Azul, Prata e Rosa",                   img: "products/nike-campo-vapor/vapor-10.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Bege e Rosa",                          img: "products/nike-campo-vapor/vapor-11.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Coral e Azul",                       img: "products/nike-campo-vapor/vapor-12.png" },
+      { name: "Mercurial Vapor 15 Elite FG — Roxo e Preto",      img: "products/nike-campo-vapor/vapor-13.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Preto e Rosa",                         img: "products/nike-campo-vapor/vapor-14.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Branco",                        img: "products/nike-campo-vapor/vapor-15.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa",                            img: "products/nike-campo-vapor/vapor-16.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco, Rosa e Vermelho",              img: "products/nike-campo-vapor/vapor-17.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Amarelo",                         img: "products/nike-campo-vapor/vapor-18.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Preto e Cinza",                        img: "products/nike-campo-vapor/vapor-19.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Preto",                   img: "products/nike-campo-vapor/vapor-20.png" },
+
+      { name: "Mercurial Vapor 16 Elite SE FG — Branco, Cinza e Verde",        img: "products/nike-campo-vapor/vapor-21.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Preto, Amarelo e Azul",                img: "products/nike-campo-vapor/vapor-22.png" },
+      { name: "Mercurial Vapor 14 Elite FG — Branco e Multicor",               img: "products/nike-campo-vapor/vapor-23.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Verde",                    img: "products/nike-campo-vapor/vapor-24.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Laranja e Dourado",                    img: "products/nike-campo-vapor/vapor-25.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Creme e Multicor",                img: "products/nike-campo-vapor/vapor-26.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Verde e Azul",                    img: "products/nike-campo-vapor/vapor-27.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Azul",                        img: "products/nike-campo-vapor/vapor-28.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco",                         img: "products/nike-campo-vapor/vapor-29.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco e Multicor",               img: "products/nike-campo-vapor/vapor-30.png" },
+      { name: "Mercurial Vapor 15 Elite FG — Laranja e Preto",   img: "products/nike-campo-vapor/vapor-31.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Verde",                   img: "products/nike-campo-vapor/vapor-32.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Azul e Laranja",                       img: "products/nike-campo-vapor/vapor-33.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco e Vermelho",                    img: "products/nike-campo-vapor/vapor-34.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco e Vermelho",  img: "products/nike-campo-vapor/vapor-35.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco, Azul e Rosa",                  img: "products/nike-campo-vapor/vapor-36.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Branco e Dourado",                     img: "products/nike-campo-vapor/vapor-37.png" },
+      { name: "Mercurial Vapor 16 Elite FG — Creme e Preto",                        img: "products/nike-campo-vapor/vapor-38.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Amarelo",                  img: "products/nike-campo-vapor/vapor-39.jpg" },
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Branco",                        img: "products/nike-campo-vapor/vapor-40.png" }
+    ] },
+    adidas: { brand: "ADIDAS", price: PRICE.campo, models: [
+      { name: "Copa Pure III Elite FG — Branco, Vermelho e Preto",     img: "products/adidas-campo/3e184e34.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco, Preto e Vermelho", img: "products/adidas-campo/5bec2639.png" },
+      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/6a56bd61.png" },
+      { name: "Copa Pure III Elite FG — Branco e Azul",               img: "products/adidas-campo/6d8ea455.png" },
+      { name: "Copa Pure III Elite Laceless FG — Preto, Vermelho e Branco", img: "products/adidas-campo/7b00e287.png" },
+      { name: "Copa Pure III Elite FG — Prata, Azul e Verde",         img: "products/adidas-campo/32f8528c.png" },
+      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/33d14cd8.png" },
+      { name: "Copa Pure III Elite FG — Amarelo e Preto",        img: "products/adidas-campo/433f6a07.png" },
+      { name: "Copa Pure III Elite FG — Cinza, Preto e Amarelo",      img: "products/adidas-campo/1478b9f9.jpg" },
+      { name: "Copa Pure III Elite Laceless FG — Preto e Verde", img: "products/adidas-campo/4292e4f7.png" },
+      { name: "Copa Pure III Elite Laceless FG — Preto, Roxo e Rosa", img: "products/adidas-campo/11943798.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco e Azul", img: "products/adidas-campo/a03081b4.png" },
+      { name: "Copa Pure III Elite FG — Amarelo, Preto e Branco", img: "products/adidas-campo/ac0be76d.jpg" },
+      { name: "Copa Pure III Elite Laceless FG — Preto e Laranja",    img: "products/adidas-campo/ac1482f5.png" },
+      { name: "Copa Pure III Elite Laceless FG — Vermelho e Branco",  img: "products/adidas-campo/acfca00e.png" },
+      { name: "Copa Pure III Elite Laceless FG — Prata e Branco",     img: "products/adidas-campo/bbd9da13.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco, Laranja e Azul", img: "products/adidas-campo/cc6a0ce9.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco e Dourado",   img: "products/adidas-campo/d63a7117.png" },
+      { name: "Copa Pure III Elite FG — Preto e Vermelho",            img: "products/adidas-campo/e4818b03.png" },
+
+      { name: "F50 Elite Laceless FG — Amarelo, Preto e Coral",   img: "products/adidas-campo-f50/f50-01.png" },
+      { name: "F50 Elite Laceless FG — Branco, Roxo e Rosa",           img: "products/adidas-campo-f50/f50-02.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Rosa e Preto",        img: "products/adidas-campo-f50/f50-03.png" },
+      { name: "F50 Elite Laceless FG — Branco e Coral",                img: "products/adidas-campo-f50/f50-04.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Bege, Azul e Coral",  img: "products/adidas-campo-f50/f50-05.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Azul e Branco",       img: "products/adidas-campo-f50/f50-06.png" },
+      { name: "F50 Sparkfusion Elite Laceless FG — Rosa e Branco",     img: "products/adidas-campo-f50/f50-07.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Coral e Bege",        img: "products/adidas-campo-f50/f50-08.png" },
+      { name: "F50 Elite Laceless FG — Verde",                   img: "products/adidas-campo-f50/f50-09.png" },
+      { name: "F50 Elite Laceless FG — Branco, Azul e Dourado",        img: "products/adidas-campo-f50/f50-10.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Azul e Rosa",         img: "products/adidas-campo-f50/f50-11.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Laranja e Roxo",      img: "products/adidas-campo-f50/f50-12.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Azul",          img: "products/adidas-campo-f50/f50-13.png" },
+      { name: "F50 Elite Laceless FG — Preto e Azul",                  img: "products/adidas-campo-f50/f50-14.png" },
+      { name: "F50 Hyperfast Elite Laceless FG — Roxo e Amarelo",      img: "products/adidas-campo-f50/f50-15.png" },
+
+      { name: "Predator Elite FG — Coral e Branco",                              img: "products/adidas-campo-predator/predator-01.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco e Dourado",            img: "products/adidas-campo-predator/predator-02.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco, Rosa e Amarelo", img: "products/adidas-campo-predator/predator-03.png" },
+      { name: "Predator Elite FG Foldover Tongue — Bege, Preto e Vermelho",      img: "products/adidas-campo-predator/predator-04.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco e Vermelho",           img: "products/adidas-campo-predator/predator-05.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco e Azul",               img: "products/adidas-campo-predator/predator-06.png" },
+      { name: "Predator Elite FG Foldover Tongue — Vermelho e Prata",            img: "products/adidas-campo-predator/predator-07.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco e Dourado", img: "products/adidas-campo-predator/predator-08.png" },
+      { name: "Predator Elite FG Foldover Tongue — Amarelo e Laranja",      img: "products/adidas-campo-predator/predator-09.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco e Vermelho",           img: "products/adidas-campo-predator/predator-10.png" },
+      { name: "Predator Elite FG Foldover Tongue — Azul e Rosa",                 img: "products/adidas-campo-predator/predator-11.png" },
+      { name: "Predator Elite FG Foldover Tongue — Grafite e Laranja",           img: "products/adidas-campo-predator/predator-12.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco, Azul e Amarelo", img: "products/adidas-campo-predator/predator-13.png" },
+      { name: "Predator Elite Laceless FG Foldover Tongue — Preto e Branco",     img: "products/adidas-campo-predator/predator-14.png" },
+      { name: "Predator Elite FG Foldover Tongue — Branco",                     img: "products/adidas-campo-predator/predator-15.png" },
+      { name: "Predator Elite FG Foldover Tongue — Vermelho e Branco",          img: "products/adidas-campo-predator/predator-16.png" },
+      { name: "Predator Elite Laceless FG — Amarelo e Branco",             img: "products/adidas-campo-predator/predator-17.png" },
+      { name: "Predator Elite Laceless AG — Branco e Prata",                    img: "products/adidas-campo-predator/predator-18.png" },
+      { name: "Predator Elite Laceless FG — Coral e Dourado",                   img: "products/adidas-campo-predator/predator-19.png" },
+      { name: "Predator Elite Laceless FG — Vermelho",                          img: "products/adidas-campo-predator/predator-20.png" }
+    ] },
+    mizuno: { brand: "MIZUNO", price: PRICE.campo, models: [
+      { name: "Morelia Neo II Made in Japan FG — Branco e Dourado",         img: "products/mizuno-campo/0cd9ce30.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Dourado e Preto",          img: "products/mizuno-campo/2bd3245f.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Preto, Branco e Vermelho", img: "products/mizuno-campo/7ac34d65.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Azul e Branco",            img: "products/mizuno-campo/8a8ba447.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Branco, Preto e Vermelho", img: "products/mizuno-campo/9rVBs.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Prata e Dourado",          img: "products/mizuno-campo/14aa1296.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Azul e Verde", img: "products/mizuno-campo/47c26ba4.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Branco e Vermelho",        img: "products/mizuno-campo/830373f2.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Branco, Azul e Dourado",   img: "products/mizuno-campo/6820616e.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Azul e Marinho",     img: "products/mizuno-campo/aNYCu.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Preto e Branco",           img: "products/mizuno-campo/Bo7S5.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Branco",       img: "products/mizuno-campo/ccd74eca.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Branco e Coral",  img: "products/mizuno-campo/d2bc2a1a.jpeg" },
+      { name: "Morelia Neo II Made in Japan FG — Azul e Laranja",     img: "products/mizuno-campo/dae845e3.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Preto e Azul",     img: "products/mizuno-campo/e8d86211.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Preto",              img: "products/mizuno-campo/fhxvk.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Amarelo e Preto",     img: "products/mizuno-campo/IVmYu.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Rosa, Branco e Preto",     img: "products/mizuno-campo/UJYxT.jpg" },
+      { name: "Morelia Neo II Made in Japan FG — Preto, Prata e Amarelo",   img: "products/mizuno-campo/0aceab0a.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco e Azul",             img: "products/mizuno-campo-neo2/be10d605.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Azul e Branco",             img: "products/mizuno-campo-neo2/c110be8a.jpeg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco e Vermelho",         img: "products/mizuno-campo-neo2/d2bc2a1a__1_.jpeg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto e Dourado",           img: "products/mizuno-campo-neo2/d8fabf5c.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco e Dourado",   img: "products/mizuno-campo-neo2/da509d71.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco, Preto e Vermelho",  img: "products/mizuno-campo-neo2/ea3600b1.jpeg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto",               img: "products/mizuno-campo-neo2/eae6f74c.jpeg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto", img: "products/mizuno-campo-neo2/f79159c9.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Coral",                    img: "products/mizuno-campo-neo2/1c9f721a.png" },
+      { name: "Morelia Neo III Made in Japan FG — Branco e Verde",           img: "products/mizuno-campo-neo2/2a1a99a7.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Azul e Vermelho",    img: "products/mizuno-campo-neo2/5a3fff0e.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto, Branco e Vermelho", img: "products/mizuno-campo-neo2/67d32a84.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto, Verde e Roxo", img: "products/mizuno-campo-neo2/77c636e4.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Prata",                   img: "products/mizuno-campo-neo2/94abf452.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Vermelho e Preto",        img: "products/mizuno-campo-neo2/551e2294.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco, Azul e Vermelho", img: "products/mizuno-campo-neo2/728d7547.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Preto e Vermelho",        img: "products/mizuno-campo-neo2/844e4d25.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco, Azul e Verde", img: "products/mizuno-campo-neo2/4218e642.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Vermelho e Branco",       img: "products/mizuno-campo-neo2/9446468f.jpg" },
+      { name: "Morelia Neo III Made in Japan FG — Branco, Prata e Dourado", img: "products/mizuno-campo-neo2/b7f5738e.jpg" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco e Coral",          img: "products/mizuno-campo-neo3/bcd1bae8.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Azul",              img: "products/mizuno-campo-neo3/c7e9257c.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Creme e Coral",           img: "products/mizuno-campo-neo3/d2c72ba5.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco",      img: "products/mizuno-campo-neo3/fd872af3.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco e Azul",           img: "products/mizuno-campo-neo3/0b10f424.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Preto",             img: "products/mizuno-campo-neo3/1ea7510e.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Prata e Azul",    img: "products/mizuno-campo-neo3/2b402795.jpg" },
+      { name: "Morelia Neo IV Made in Japan FG — Preto, Branco e Vermelho", img: "products/mizuno-campo-neo3/3d0946fd.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Preto e Vermelho",        img: "products/mizuno-campo-neo3/6ec88465.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Coral e Dourado",         img: "products/mizuno-campo-neo3/9e5b93e2.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Coral",                   img: "products/mizuno-campo-neo3/41cf3c06.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco, Preto e Vermelho", img: "products/mizuno-campo-neo3/048ccd51.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco, Azul e Rosa",     img: "products/mizuno-campo-neo3/60aa17ed.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Verde",              img: "products/mizuno-campo-neo3/70bd5785.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco, Azul e Verde", img: "products/mizuno-campo-neo3/0292f2fc.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco e Dourado",        img: "products/mizuno-campo-neo3/014575a3.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco, Amarelo e Coral", img: "products/mizuno-campo-neo3/61706680.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco",         img: "products/mizuno-campo-neo3/a48eabd7.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Azul e Dourado",          img: "products/mizuno-campo-neo3/a9734718.png" },
+      { name: "Morelia Neo IV Made in Japan FG — Branco e Rosa",           img: "products/mizuno-campo-neo3/b135c87b.png" }
+    ] },
+    puma: { brand: "PUMA", price: PRICE.campo, models: [
+      { name: "Future Ultimate FG — Branco, Roxo e Rosa",        img: "products/puma-campo/0ce821a5.jpg" },
+      { name: "Future Ultimate FG — Preto",                 img: "products/puma-campo/0f24e7a1.jpg" },
+      { name: "Future Ultimate FG — Verde e Roxo",        img: "products/puma-campo/2ae7730d.png" },
+      { name: "Ultra Ultimate FG — Branco, Azul e Coral",         img: "products/puma-campo/30e81fc9.png" },
+      { name: "Future Ultimate FG — Branco, Preto e Laranja",     img: "products/puma-campo/321ae114.jpg" },
+      { name: "Future Ultimate FG — Branco e Verde",        img: "products/puma-campo/520f7e99.jpg" },
+      { name: "Ultra Ultimate FG — Branco e Azul",      img: "products/puma-campo/818b07a9.png" },
+      { name: "Future Ultimate FG — Amarelo e Verde",   img: "products/puma-campo/9725ed7c.jpg" },
+      { name: "Future Ultimate FG — Branco e Coral",     img: "products/puma-campo/40427aa0.jpg" },
+      { name: "Ultra Carbon FG — Verde e Azul",     img: "products/puma-campo/055426f5.png" },
+      { name: "Ultra Carbon FG — Grafite e Vermelho",    img: "products/puma-campo/166410d0.png" },
+      { name: "Ultra Ultimate FG — Rosa",             img: "products/puma-campo/374392de.png" },
+      { name: "Future Ultimate FG — Laranja e Roxo",              img: "products/puma-campo/657067ac.png" },
+      { name: "Ultra Carbon FG — Roxo e Coral",          img: "products/puma-campo/b4a38712.png" },
+      { name: "Future Ultimate FG — Azul e Laranja",     img: "products/puma-campo/c4d6218a.jpg" },
+      { name: "Future Ultimate FG — Azul e Laranja",              img: "products/puma-campo/d3332f2d.jpg" },
+      { name: "Future Ultimate FG — Preto, Branco e Rosa",        img: "products/puma-campo/ddd40854.jpg" },
+      { name: "Ultra Carbon FG — Preto, Roxo e Coral",   img: "products/puma-campo/e482f161.png" },
+      { name: "Future Ultimate FG — Dourado e Preto",             img: "products/puma-campo/f8446aed.jpg" }
+    ] },
+
+    "nike-so":   { brand: "NIKE",   price: PRICE.society, models: [
+      { name: "Phantom GX TF — Branco e Azul",    img: "products/nike-so/phantomgx-01.png" },
+      { name: "Phantom GX TF — Prata e Verde",    img: "products/nike-so/phantomgx-02.png" },
+      { name: "Phantom GX TF — Azul e Coral",     img: "products/nike-so/phantomgx-03.png" },
+      { name: "Phantom GX TF — Bege e Roxo",      img: "products/nike-so/phantomgx-04.png" },
+      { name: "Phantom GX TF — Preto e Marinho",  img: "products/nike-so/phantomgx-05.png" },
+      { name: "Phantom GX TF — Lilás e Coral",    img: "products/nike-so/phantomgx-06.png" },
+      { name: "Phantom GX TF — Bege e Azul",      img: "products/nike-so/phantomgx-07.png" },
+      { name: "Phantom GX TF — Verde e Preto",    img: "products/nike-so/phantomgx-08.png" },
+      { name: "Phantom GX TF — Marinho e Laranja", img: "products/nike-so/phantomgx-09.png" },
+      { name: "Phantom GX TF — Verde e Coral",    img: "products/nike-so/phantomgx-10.png" },
+      { name: "Tiempo Ligera Pro TF — Branco e Azul",    img: "products/nike-so/tiempoligera-01.png" },
+      { name: "Tiempo Ligera Pro TF — Preto e Azul",      img: "products/nike-so/tiempoligera-02.png" },
+      { name: "Tiempo Ligera Pro TF — Preto e Dourado",   img: "products/nike-so/tiempoligera-03.png" },
+      { name: "Tiempo Ligera Pro TF — Branco e Laranja",  img: "products/nike-so/tiempoligera-04.png" },
+      { name: "Tiempo Ligera Pro TF — Bege e Marinho",    img: "products/nike-so/tiempoligera-05.png" },
+      { name: "Phantom Luna TF — Preto e Cinza",       img: "products/nike-so/phantomluna-01.jpg" },
+      { name: "Phantom Luna TF — Branco e Laranja",    img: "products/nike-so/phantomluna-02.jpg" },
+      { name: "Phantom Luna TF — Verde",               img: "products/nike-so/phantomluna-03.jpg" },
+      { name: "Phantom Luna TF — Verde-água e Roxo",   img: "products/nike-so/phantomluna-04.jpg" },
+      { name: "Phantom Luna TF — Vermelho",            img: "products/nike-so/phantomluna-05.jpg" },
+      { name: "Phantom Luna TF — Amarelo",             img: "products/nike-so/phantomluna-06.jpg" },
+      { name: "Phantom Luna TF — Preto e Azul",        img: "products/nike-so/phantomluna-07.jpg" },
+      { name: "Phantom Luna TF — Verde-água e Verde",  img: "products/nike-so/phantomluna-08.jpg" },
+      { name: "Phantom Luna TF — Azul",                img: "products/nike-so/phantomluna-09.jpg" },
+      { name: "Phantom Luna TF — Verde-água e Laranja", img: "products/nike-so/phantomluna-10.png" },
+      { name: "Phantom Luna TF — Rosa",                img: "products/nike-so/phantomluna-11.png" },
+      { name: "Phantom Luna TF — Branco e Azul",       img: "products/nike-so/phantomluna-12.jpg" },
+      { name: "Phantom Luna TF — Verde-água",          img: "products/nike-so/phantomluna-13.jpg" },
+      { name: "Phantom Luna TF — Laranja",             img: "products/nike-so/phantomluna-14.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Azul e Verde",      img: "products/nike-so/vapor14-01.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Preto e Vermelho",  img: "products/nike-so/vapor14-02.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Preto",             img: "products/nike-so/vapor14-03.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Branco e Rosa",     img: "products/nike-so/vapor14-04.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Branco e Laranja",  img: "products/nike-so/vapor14-05.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Laranja e Verde",   img: "products/nike-so/vapor14-06.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Branco e Azul",     img: "products/nike-so/vapor14-07.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Branco e Colorido", img: "products/nike-so/vapor14-08.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Branco e Verde",    img: "products/nike-so/vapor14-09.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Azul e Vermelho",   img: "products/nike-so/vapor14-10.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Vermelho e Branco", img: "products/nike-so/vapor14-11.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Verde-água e Verde", img: "products/nike-so/vapor14-12.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Verde e Vermelho",  img: "products/nike-so/vapor14-13.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Rosa",              img: "products/nike-so/vapor14-14.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Azul e Laranja",    img: "products/nike-so/vapor14-15.jpg" },
+      { name: "Mercurial Vapor 14 Elite TF — Preto e Azul",      img: "products/nike-so/vapor14-16.jpg" }
+    ] },
+    "adidas-so": { brand: "ADIDAS", price: PRICE.society, models: [
+      { name: "Predator Elite TF — Preto e Vermelho",  img: "products/adidas-so/predator-01.png" },
+      { name: "Predator Elite TF — Branco e Rosa",     img: "products/adidas-so/predator-02.jpg" },
+      { name: "Predator Elite TF — Branco e Laranja",  img: "products/adidas-so/predator-03.png" },
+      { name: "Predator Elite TF — Branco e Dourado",  img: "products/adidas-so/predator-04.jpg" },
+      { name: "Predator Elite TF — Preto",             img: "products/adidas-so/predator-05.jpg" },
+      { name: "Predator Elite TF — Amarelo e Rosa",    img: "products/adidas-so/predator-06.png" },
+      { name: "Predator Elite TF — Bege e Preto",      img: "products/adidas-so/predator-07.png" },
+      { name: "Predator Elite TF — Branco e Prata",    img: "products/adidas-so/predator-08.jpg" },
+      { name: "Predator Elite TF — Preto e Azul",      img: "products/adidas-so/predator-09.png" },
+      { name: "Predator Elite TF — Laranja e Preto",   img: "products/adidas-so/predator-10.jpg" },
+      { name: "Predator Elite TF — Verde e Rosa",      img: "products/adidas-so/predator-11.png" },
+      { name: "Predator Elite TF — Branco e Marinho",  img: "products/adidas-so/predator-12.png" },
+      { name: "Predator Elite TF — Preto e Vermelho",  img: "products/adidas-so/predator-13.png" },
+      { name: "Predator Elite TF — Prata e Vermelho",  img: "products/adidas-so/predator-14.png" },
+      { name: "Predator Elite TF — Vermelho e Branco", img: "products/adidas-so/predator-15.jpg" },
+      { name: "Predator Elite TF — Amarelo e Preto",   img: "products/adidas-so/predator-16.jpg" },
+      { name: "Predator Elite TF — Preto e Amarelo",   img: "products/adidas-so/predator-17.jpg" },
+      { name: "Predator Elite TF — Preto e Laranja",   img: "products/adidas-so/predator-18.jpg" },
+      { name: "Predator Elite TF — Dourado e Preto",   img: "products/adidas-so/predator-19.png" },
+      { name: "Predator Elite TF — Branco e Azul",     img: "products/adidas-so/predator-20.png" }
+    ] },
+    "mizuno-so": { brand: "MIZUNO", price: PRICE.society, models: [
+      { name: "Morelia II TF — Branco e Preto",    img: "products/mizuno-so/morelia-01.png" },
+      { name: "Morelia II TF — Vermelho e Branco",  img: "products/mizuno-so/morelia-02.png" },
+      { name: "Morelia II TF — Prata e Dourado",    img: "products/mizuno-so/morelia-03.png" },
+      { name: "Morelia II TF — Branco e Verde",     img: "products/mizuno-so/morelia-04.png" },
+      { name: "Morelia II TF — Preto",              img: "products/mizuno-so/morelia-05.png" },
+      { name: "Morelia II TF — Vermelho e Branco",  img: "products/mizuno-so/morelia-06.png" },
+      { name: "Morelia II TF — Branco e Azul",      img: "products/mizuno-so/morelia-07.png" },
+      { name: "Morelia II TF — Preto e Branco",     img: "products/mizuno-so/morelia-08.png" }
+    ] },
+    "puma-so":   { brand: "PUMA",   price: PRICE.society, models: [
+      { name: "Ultra Match TF — Branco e Rosa",     img: "products/puma-so/ultramatch-01.png" },
+      { name: "Ultra Match TF — Azul e Rosa",       img: "products/puma-so/ultramatch-02.png" },
+      { name: "Ultra Match TF — Amarelo e Preto",   img: "products/puma-so/ultramatch-03.png" },
+      { name: "Ultra Match TF — Laranja e Preto",   img: "products/puma-so/ultramatch-04.png" },
+      { name: "Ultra Match TF — Preto e Laranja",   img: "products/puma-so/ultramatch-05.png" },
+      { name: "Ultra Match TF — Laranja e Preto",   img: "products/puma-so/ultramatch-06.png" },
+      { name: "Ultra Match TF — Azul e Rosa",       img: "products/puma-so/ultramatch-07.png" },
+      { name: "Ultra Match TF — Branco",            img: "products/puma-so/ultramatch-08.png" },
+      { name: "Ultra Match TF — Branco e Roxo",     img: "products/puma-so/ultramatch-09.png" },
+      { name: "Ultra Match TF — Branco e Laranja",  img: "products/puma-so/ultramatch-10.png" },
+      { name: "Ultra Match TF — Branco e Verde",    img: "products/puma-so/ultramatch-11.png" },
+      { name: "Ultra Match TF — Branco e Multicolor", img: "products/puma-so/ultramatch-12.png" },
+      { name: "Ultra Match TF — Preto e Branco",    img: "products/puma-so/ultramatch-13.png" },
+      { name: "Ultra Match TF — Vermelho e Azul",   img: "products/puma-so/ultramatch-14.png" },
+      { name: "Ultra Match TF — Branco e Azul",     img: "products/puma-so/ultramatch-15.png" }
+    ] },
+    "joma-so":   { brand: "JOMA",   price: PRICE.society, models: [
+      { name: "Top Flex TF — Branco e Laranja",  img: "products/joma-so/topflex-01.png" },
+      { name: "Top Flex TF — Verde e Preto",     img: "products/joma-so/topflex-02.png" },
+      { name: "Top Flex TF — Branco e Preto",    img: "products/joma-so/topflex-03.png" },
+      { name: "Top Flex TF — Prata e Rosa",      img: "products/joma-so/topflex-04.png" },
+      { name: "Top Flex TF — Preto e Amarelo",   img: "products/joma-so/topflex-05.png" },
+      { name: "Top Flex TF — Laranja e Verde",   img: "products/joma-so/topflex-06.png" },
+      { name: "Top Flex TF — Preto e Amarelo",   img: "products/joma-so/topflex-07.png" },
+      { name: "Top Flex TF — Branco e Verde",    img: "products/joma-so/topflex-08.png" },
+      { name: "Top Flex TF — Amarelo e Vermelho", img: "products/joma-so/topflex-09.png" },
+      { name: "Top Flex TF — Branco e Amarelo",  img: "products/joma-so/topflex-10.png" },
+      { name: "Top Flex TF — Azul e Laranja",    img: "products/joma-so/topflex-11.png" },
+      { name: "Top Flex TF — Azul e Verde",      img: "products/joma-so/topflex-12.png" },
+      { name: "Top Flex TF — Amarelo e Preto",   img: "products/joma-so/topflex-13.png" },
+      { name: "Top Flex TF — Branco e Verde",    img: "products/joma-so/topflex-14.png" },
+      { name: "Top Flex TF — Rosa e Marinho",    img: "products/joma-so/topflex-15.png" },
+      { name: "Top Flex TF — Azul e Branco",     img: "products/joma-so/topflex-16.png" },
+      { name: "Top Flex TF — Branco e Laranja",  img: "products/joma-so/topflex-17.png" },
+      { name: "Top Flex TF — Branco e Verde",    img: "products/joma-so/topflex-18.png" },
+      { name: "Top Flex TF — Branco e Dourado",  img: "products/joma-so/topflex-19.png" },
+      { name: "Top Flex TF — Branco e Azul",     img: "products/joma-so/topflex-20.png" },
+      { name: "Top Flex TF — Branco e Dourado",  img: "products/joma-so/topflex-21.png" },
+      { name: "Top Flex TF — Preto e Coral",     img: "products/joma-so/topflex-22.png" },
+      { name: "Top Flex TF — Preto e Azul",      img: "products/joma-so/topflex-23.png" },
+      { name: "Top Flex TF — Azul e Preto",      img: "products/joma-so/topflex-24.png" },
+      { name: "Top Flex TF — Branco e Verde",    img: "products/joma-so/topflex-25.png" },
+      { name: "Top Flex TF — Preto e Laranja",   img: "products/joma-so/topflex-26.png" },
+      { name: "Top Flex TF — Amarelo e Verde",   img: "products/joma-so/topflex-27.png" },
+      { name: "Top Flex TF — Vermelho e Preto",  img: "products/joma-so/topflex-28.png" },
+      { name: "Top Flex TF — Branco e Multicolor", img: "products/joma-so/topflex-29.png" },
+      { name: "Top Flex TF — Branco e Azul",     img: "products/joma-so/topflex-30.png" },
+      { name: "Top Flex TF — Branco e Laranja",  img: "products/joma-so/topflex-31.png" },
+      { name: "Top Flex TF — Branco e Laranja",  img: "products/joma-so/topflex-32.png" },
+      { name: "Top Flex TF — Marinho e Verde",   img: "products/joma-so/topflex-33.png" },
+      { name: "Top Flex TF — Branco e Azul",     img: "products/joma-so/topflex-34.png" },
+      { name: "Top Flex TF — Verde e Preto",     img: "products/joma-so/topflex-35.png" },
+      { name: "Top Flex TF — Branco e Preto",    img: "products/joma-so/topflex-36.png" },
+      { name: "Top Flex TF — Preto e Branco",    img: "products/joma-so/topflex-37.png" }
+    ] },
+
+    "nike-fs":   { brand: "NIKE",   price: PRICE.futsal,  models: [
+      { name: "Streetgato IC — Marinho e Verde", img: "products/nike-fs/streetgato-01.jpg" },
+      { name: "Streetgato IC — Cinza e Rosa",         img: "products/nike-fs/streetgato-02.jpg" },
+      { name: "Streetgato IC — Rosa",                 img: "products/nike-fs/streetgato-03.jpg" },
+      { name: "Streetgato IC — Preto e Prata",        img: "products/nike-fs/streetgato-04.jpg" },
+      { name: "Streetgato IC — Roxo e Cinza",        img: "products/nike-fs/streetgato-05.jpg" },
+      { name: "Streetgato IC — Azul e Amarelo",       img: "products/nike-fs/streetgato-06.jpg" },
+      { name: "Streetgato IC — Cinza e Preto",        img: "products/nike-fs/streetgato-07.jpg" },
+      { name: "Streetgato IC — Azul e Branco",        img: "products/nike-fs/streetgato-08.jpg" },
+      { name: "Streetgato IC — Vermelho",             img: "products/nike-fs/streetgato-09.jpg" },
+      { name: "Streetgato IC — Branco e Dourado",     img: "products/nike-fs/streetgato-10.jpg" },
+      { name: "Streetgato IC — Branco e Azul",        img: "products/nike-fs/streetgato-11.jpg" },
+      { name: "Streetgato IC — Cinza e Roxo",    img: "products/nike-fs/streetgato-12.png" },
+      { name: "Streetgato IC — Cinza e Prata",  img: "products/nike-fs/streetgato-13.png" },
+      { name: "Streetgato IC — Preto e Cinza",        img: "products/nike-fs/streetgato-14.jpg" },
+      { name: "Streetgato IC — Preto",          img: "products/nike-fs/streetgato-15.jpg" },
+      { name: "Streetgato IC — Cinza e Marinho", img: "products/nike-fs/streetgato-16.jpg" },
+      { name: "Streetgato IC — Creme e Azul",         img: "products/nike-fs/streetgato-17.jpg" },
+      { name: "Streetgato IC — Azul e Rosa",          img: "products/nike-fs/streetgato-18.jpg" },
+      { name: "Streetgato IC — Branco e Azul", img: "products/nike-fs/streetgato-19.jpg" },
+
+      { name: "SB Gato Supreme IC — Branco e Rosa",  img: "products/nike-fs/sbgato-01.jpg" },
+      { name: "SB Gato Supreme IC — Preto e Rosa",   img: "products/nike-fs/sbgato-02.jpg" },
+      { name: "SB Gato Supreme IC — Azul",     img: "products/nike-fs/sbgato-03.jpg" },
+      { name: "SB Gato Supreme IC — Vermelho e Amarelo", img: "products/nike-fs/sbgato-04.jpg" },
+
+      { name: "Lunar Gato II IC — Azul e Laranja",   img: "products/nike-fs/lunargato2-01.png" },
+      { name: "Lunar Gato II IC — Azul e Verde", img: "products/nike-fs/lunargato2-02.jpg" },
+      { name: "Lunar Gato II IC — Branco e Vermelho", img: "products/nike-fs/lunargato2-03.jpg" },
+      { name: "Lunar Gato II IC — Bege e Coral",     img: "products/nike-fs/lunargato2-04.png" },
+      { name: "Lunar Gato II IC — Verde",       img: "products/nike-fs/lunargato2-05.png" },
+      { name: "Lunar Gato II IC — Branco e Multicor", img: "products/nike-fs/lunargato2-06.jpg" },
+      { name: "Lunar Gato II IC — Branco e Verde", img: "products/nike-fs/lunargato2-07.jpg" },
+      { name: "Lunar Gato II IC — Preto e Vermelho", img: "products/nike-fs/lunargato2-08.jpg" },
+      { name: "Lunar Gato II IC — Cinza e Azul",     img: "products/nike-fs/lunargato2-09.png" },
+      { name: "Lunar Gato II IC — Cinza e Verde", img: "products/nike-fs/lunargato2-10.jpg" },
+      { name: "Lunar Gato II IC — Branco e Rosa",    img: "products/nike-fs/lunargato2-11.png" },
+      { name: "Lunar Gato II IC — Verde", img: "products/nike-fs/lunargato2-12.jpg" },
+      { name: "Lunar Gato II IC — Preto e Laranja",  img: "products/nike-fs/lunargato2-13.jpg" },
+      { name: "Lunar Gato II IC — Branco e Prata",   img: "products/nike-fs/lunargato2-14.png" },
+      { name: "Lunar Gato II IC — Verde", img: "products/nike-fs/lunargato2-15.jpg" },
+
+      { name: "Lunar Gato II IC — Vermelho e Branco",          img: "products/nike-fs/lunargato2-16.jpg" },
+      { name: "Lunar Gato II IC — Marinho e Verde",   img: "products/nike-fs/lunargato2-17.jpg" },
+      { name: "Lunar Gato II IC — Amarelo e Preto",         img: "products/nike-fs/lunargato2-18.jpg" },
+      { name: "Lunar Gato II IC — Branco e Rosa",      img: "products/nike-fs/lunargato2-19.jpg" },
+      { name: "Lunar Gato II IC — Preto",           img: "products/nike-fs/lunargato2-20.png" },
+      { name: "Lunar Gato II IC — Azul e Branco",     img: "products/nike-fs/lunargato2-21.jpg" },
+      { name: "Lunar Gato II IC — Cinza e Laranja",         img: "products/nike-fs/lunargato2-22.jpg" },
+      { name: "Lunar Gato II IC — Preto e Azul",   img: "products/nike-fs/lunargato2-23.png" },
+      { name: "Lunar Gato II IC — Cinza e Roxo",            img: "products/nike-fs/lunargato2-24.png" },
+      { name: "Lunar Gato II IC — Roxo e Laranja",         img: "products/nike-fs/lunargato2-25.png" },
+      { name: "Lunar Gato II IC — Preto",          img: "products/nike-fs/lunargato2-26.jpg" },
+      { name: "Lunar Gato II IC — Roxo e Multicor",       img: "products/nike-fs/lunargato2-27.jpg" },
+      { name: "Lunar Gato II IC — Cinza e Azul", img: "products/nike-fs/lunargato2-28.jpg" },
+      { name: "Lunar Gato II IC — Branco", img: "products/nike-fs/lunargato2-29.jpg" },
+      { name: "Lunar Gato II IC — Preto e Rosa",            img: "products/nike-fs/lunargato2-30.jpg" },
+      { name: "Lunar Gato II IC — Azul e Branco", img: "products/nike-fs/lunargato2-31.jpg" },
+      { name: "Lunar Gato II IC — Branco e Azul", img: "products/nike-fs/lunargato2-32.jpg" },
+      { name: "Lunar Gato II IC — Azul e Verde",      img: "products/nike-fs/lunargato2-33.jpg" },
+      { name: "Lunar Gato II IC — Dourado",                 img: "products/nike-fs/lunargato2-34.png" },
+      { name: "Lunar Gato II IC — Azul e Branco",           img: "products/nike-fs/lunargato2-35.jpg" },
+
+      { name: "Lunar Gato II IC — Branco e Verde",    img: "products/nike-fs/lunargato2-36.jpg" },
+      { name: "Lunar Gato II IC — Verde e Dourado",         img: "products/nike-fs/lunargato2-37.png" },
+      { name: "Lunar Gato II IC — Verde e Preto",     img: "products/nike-fs/lunargato2-38.png" },
+      { name: "Lunar Gato II IC — Preto e Marinho",    img: "products/nike-fs/lunargato2-39.jpg" },
+      { name: "Lunar Gato II IC — Branco e Laranja",        img: "products/nike-fs/lunargato2-40.jpg" },
+      { name: "Lunar Gato II IC — Verde", img: "products/nike-fs/lunargato2-41.jpg" },
+      { name: "Lunar Gato II IC — Branco e Vermelho",       img: "products/nike-fs/lunargato2-42.jpg" },
+      { name: "Lunar Gato II IC — Branco e Azul", img: "products/nike-fs/lunargato2-43.jpg" },
+      { name: "Lunar Gato II IC — Azul e Verde", img: "products/nike-fs/lunargato2-44.jpg" },
+      { name: "Lunar Gato II IC — Preto e Roxo",       img: "products/nike-fs/lunargato2-45.png" }
+    ] },
+    "adidas-fs": { brand: "ADIDAS", price: PRICE.futsal,  models: [
+      { name: "Copa Kapitan IN — Branco e Dourado", img: "products/adidas-fs/f50elite-01.jpg" },
+      { name: "Copa Kapitan IN — Vermelho",         img: "products/adidas-fs/f50elite-02.jpg" },
+      { name: "Copa Kapitan IN — Branco e Coral",   img: "products/adidas-fs/f50elite-03.jpg" },
+      { name: "Copa Kapitan IN — Preto e Dourado",  img: "products/adidas-fs/f50elite-04.jpg" }
+    ] },
+    "joma-fs":   { brand: "JOMA",   price: PRICE.futsal,  models: [
+      { name: "Top Flex Rebound IN — Prata e Rosa",    img: "products/joma-fs/topflex-01.png" },
+      { name: "Top Flex Rebound IN — Branco e Azul",   img: "products/joma-fs/topflex-02.png" },
+      { name: "Top Flex Rebound IN — Amarelo e Vermelho", img: "products/joma-fs/topflex-03.png" },
+      { name: "Top Flex Rebound IN — Cinza e Laranja", img: "products/joma-fs/topflex-04.png" },
+      { name: "Top Flex Rebound IN — Amarelo e Azul",  img: "products/joma-fs/topflex-05.png" },
+      { name: "Top Flex Rebound IN — Rosa e Marinho",  img: "products/joma-fs/topflex-06.png" },
+      { name: "Top Flex Rebound IN — Preto e Amarelo", img: "products/joma-fs/topflex-07.png" },
+      { name: "Top Flex Rebound IN — Marinho e Verde", img: "products/joma-fs/topflex-08.png" },
+      { name: "Top Flex Rebound IN — Branco e Laranja", img: "products/joma-fs/topflex-09.png" },
+      { name: "Top Flex Rebound IN — Branco e Multicor", img: "products/joma-fs/topflex-10.png" },
+      { name: "Top Flex Rebound IN — Verde",           img: "products/joma-fs/topflex-11.png" },
+      { name: "Top Flex Rebound IN — Branco e Verde",  img: "products/joma-fs/topflex-12.png" },
+      { name: "Top Flex Rebound IN — Branco e Coral",  img: "products/joma-fs/topflex-13.png" },
+      { name: "Top Flex Rebound IN — Marinho e Vermelho", img: "products/joma-fs/topflex-14.png" },
+      { name: "Top Flex Rebound IN — Azul e Laranja",  img: "products/joma-fs/topflex-15.png" },
+      { name: "Top Flex Rebound IN — Azul e Branco",   img: "products/joma-fs/topflex-16.png" },
+      { name: "Top Flex Rebound IN — Marinho e Laranja", img: "products/joma-fs/topflex-17.png" },
+      { name: "Top Flex Rebound IN — Preto e Azul",    img: "products/joma-fs/topflex-18.png" },
+      { name: "Top Flex Rebound IN — Preto e Verde",   img: "products/joma-fs/topflex-19.png" },
+      { name: "Top Flex Rebound IN — Branco e Preto",  img: "products/joma-fs/topflex-20.png" },
+      { name: "Top Flex Rebound IN — Azul e Amarelo",  img: "products/joma-fs/topflex-21.png" },
+      { name: "Top Flex Rebound IN — Branco e Verde",  img: "products/joma-fs/topflex-22.png" },
+      { name: "Top Flex Rebound IN — Branco e Verde",  img: "products/joma-fs/topflex-23.png" },
+      { name: "Top Flex Rebound IN — Branco e Preto",  img: "products/joma-fs/topflex-24.png" },
+
+      { name: "Top Flex Plus IN — Verde e Rosa",       img: "products/joma-fs/topflexplus-01.png" },
+      { name: "Top Flex Plus IN — Branco e Azul",      img: "products/joma-fs/topflexplus-02.png" },
+      { name: "Top Flex Plus IN — Branco e Verde",     img: "products/joma-fs/topflexplus-03.png" },
+      { name: "Top Flex Plus IN — Preto e Rosa",       img: "products/joma-fs/topflexplus-04.png" },
+      { name: "Top Flex Plus IN — Branco e Azul",      img: "products/joma-fs/topflexplus-05.png" },
+      { name: "Top Flex Plus IN — Branco e Laranja",   img: "products/joma-fs/topflexplus-06.png" },
+      { name: "Top Flex Plus IN — Preto e Coral",      img: "products/joma-fs/topflexplus-07.png" },
+      { name: "Top Flex Plus IN — Branco e Azul",      img: "products/joma-fs/topflexplus-08.png" },
+      { name: "Top Flex Plus IN — Preto e Verde",      img: "products/joma-fs/topflexplus-09.png" },
+      { name: "Top Flex Plus IN — Branco e Multicor",  img: "products/joma-fs/topflexplus-10.png" },
+      { name: "Top Flex Plus IN — Laranja e Preto",    img: "products/joma-fs/topflexplus-11.png" },
+      { name: "Top Flex Plus IN — Branco e Laranja",   img: "products/joma-fs/topflexplus-12.png" },
+      { name: "Top Flex Plus IN — Branco e Multicor",  img: "products/joma-fs/topflexplus-13.png" },
+      { name: "Top Flex Plus IN — Azul e Verde",       img: "products/joma-fs/topflexplus-14.png" },
+      { name: "Top Flex Plus IN — Azul e Coral",       img: "products/joma-fs/topflexplus-15.png" },
+      { name: "Top Flex Plus IN — Branco e Azul",      img: "products/joma-fs/topflexplus-16.png" },
+
+      { name: "Regate Rebound IN — Amarelo e Preto",   img: "products/joma-fs/regate-01.png" },
+      { name: "Regate Rebound IN — Branco e Verde",    img: "products/joma-fs/regate-02.png" },
+      { name: "Regate Rebound IN — Branco e Rosa",     img: "products/joma-fs/regate-03.png" },
+      { name: "Regate Rebound IN — Branco e Verde",    img: "products/joma-fs/regate-04.png" },
+      { name: "Regate Rebound IN — Amarelo e Preto",   img: "products/joma-fs/regate-05.png" },
+      { name: "Regate Rebound IN — Branco e Vermelho", img: "products/joma-fs/regate-06.png" },
+      { name: "Regate Rebound IN — Branco e Azul",     img: "products/joma-fs/regate-07.png" },
+      { name: "Regate Rebound IN — Azul e Verde",      img: "products/joma-fs/regate-08.png" },
+      { name: "Regate Rebound IN — Preto e Laranja",   img: "products/joma-fs/regate-09.png" },
+      { name: "Regate Rebound IN — Branco e Dourado",  img: "products/joma-fs/regate-10.png" },
+      { name: "Regate Rebound IN — Branco e Laranja",  img: "products/joma-fs/regate-11.png" },
+      { name: "Regate Rebound IN — Branco e Multicor", img: "products/joma-fs/regate-12.png" }
+    ] },
+  };
+
+  // Quebra "Modelo — Cor" em partes. Se não houver " — ", cor fica nula.
+  function parseEntry(entry) {
+    const isObj = typeof entry === 'object';
+    const fullName = isObj ? entry.name : entry;
+    const photo = isObj ? entry.img : null;
+    const parts = fullName.split(' — ');
+    const colorRaw = parts.length > 1 ? parts.slice(1).join(' — ').trim() : null;
+    // separa combinações tipo "Preto, Branco e Vermelho" / "Azul e Dourado" / "Preto com Verde e Roxo"
+    const colorList = colorRaw ? colorRaw.split(/,\s*| e | com /i).map(c => c.trim()).filter(Boolean) : [];
+    return {
+      fullName,
+      model: parts[0].trim(),
+      color: colorRaw,
+      colorList,
+      img: photo
+    };
+  }
+
+  const COLOR_HEX = {
+    'branco': '#FFFFFF', 'preto': '#111111', 'azul': '#1E63C7', 'dourado': '#D4AF37',
+    'vermelho': '#D42B2B', 'rosa': '#F4A6C1', 'verde': '#1E9E4B', 'roxo': '#7B3FA0',
+    'laranja': '#F07C1E', 'prata': '#C6C6C6', 'cinza': '#8A8A8A', 'amarelo': '#F5D300',
+    'coral': '#FF6F5E', 'marinho': '#12234F', 'creme': '#F1E6C8', 'grafite': '#4A4A4A',
+    'bege': '#E8DCC4', 'multicor': 'conic-gradient(#F5D300,#1E63C7,#D42B2B,#1E9E4B,#F5D300)'
+  };
+  function colorHex(name) {
+    return COLOR_HEX[name.toLowerCase()] || '#CCCCCC';
+  }
+
+  let PRODUCT_SEQ = 0;
+  const PRODUCT_INDEX = {}; // id -> produto completo (para o carrinho)
+
+  Object.entries(CATALOG).forEach(([key, data]) => {
+    const grid = document.querySelector(`.product-grid[data-sub-panel="${key}"]`);
+    if (!grid) return;
+
+    const parsed = data.models.map(entry => parseEntry(entry));
+
+    // ---- Cards (criados primeiro, para o filtro já enxergar o DOM real) ----
+    parsed.forEach(p => {
+      const id = `p${PRODUCT_SEQ++}`;
+      const product = { id, brand: data.brand, model: p.model, color: p.color, fullName: p.fullName, price: data.price, img: p.img };
+      PRODUCT_INDEX[id] = product;
+
+      const media = p.img
+        ? `<img src="${p.img}" alt="${data.brand} ${p.fullName}" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)">`
+        : `<span class="tag">Em breve: foto real</span><svg viewBox="0 0 120 80"><use href="#boot"/></svg>`;
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.dataset.model = p.model;
+      card.dataset.colors = p.colorList.join('|');
+      card.dataset.productId = id;
+      card.innerHTML = `
+        <div class="card-media">${media}</div>
+        <div class="card-body">
+          <span class="brand-name">${data.brand}</span>
+          <h3>${p.fullName}</h3>
+          <div class="price-row card-actions">
+            <div class="price-col"><span class="price">R$ ${data.price}</span></div>
+            <button type="button" class="btn-add" data-add="${id}">+ Carrinho</button>
+            <button type="button" class="btn-buy" data-buy="${id}">Comprar</button>
+          </div>
+        </div>
+        <div data-product-id="${id}" style="display:none;"></div>`;
+      grid.appendChild(card);
+    });
+
+    // ---- Painel de filtro compacto (só aparece se houver mais de uma opção) ----
+    const models = [...new Set(parsed.map(p => p.model))];
+    const colorNames = [...new Set(parsed.flatMap(p => p.colorList))];
+    if (models.length <= 1 && colorNames.length <= 1) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'filter-trigger-wrap';
+    wrap.dataset.subPanel = key;
+    wrap.innerHTML = `
+      <div class="filter-bar-top">
+        <button type="button" class="filter-toggle-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+          Filtros
+          <span class="filter-active-badge" style="display:none;">0</span>
+        </button>
+        <span class="filter-count-text"></span>
+      </div>
+      <div class="filter-panel">
+        ${models.length > 1 ? `
+        <div class="filter-section">
+          <button type="button" class="filter-section-head" data-section="model">
+            Modelos <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          </button>
+          <div class="filter-section-body">
+            ${models.map(m => `<label class="filter-check"><input type="checkbox" data-fmodel value="${m}"> ${m}</label>`).join('')}
+          </div>
+        </div>` : ''}
+        ${colorNames.length > 1 ? `
+        <div class="filter-section">
+          <button type="button" class="filter-section-head" data-section="color">
+            Cores <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          </button>
+          <div class="filter-section-body colors-grid">
+            ${colorNames.map(c => `<button type="button" class="swatch-btn" data-fcolor="${c}" title="${c}">
+                <span class="swatch" style="background:${colorHex(c)}"></span>
+                <span class="swatch-label">${c}</span>
+              </button>`).join('')}
+          </div>
+        </div>` : ''}
+        <button type="button" class="filter-clear-link">Limpar filtros</button>
+      </div>
+    `;
+    grid.parentNode.insertBefore(wrap, grid);
+    // sincroniza a visibilidade inicial do filtro com a da grade (só a aba ativa deve aparecer)
+    wrap.style.display = grid.style.display === 'none' ? 'none' : '';
+
+    const toggleBtn = wrap.querySelector('.filter-toggle-btn');
+    const panel = wrap.querySelector('.filter-panel');
+    const badge = wrap.querySelector('.filter-active-badge');
+    const countText = wrap.querySelector('.filter-count-text');
+
+    toggleBtn.addEventListener('click', () => {
+      const willOpen = !panel.classList.contains('open');
+      document.querySelectorAll('.filter-panel.open').forEach(p => p.classList.remove('open'));
+      if (willOpen) panel.classList.add('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) panel.classList.remove('open');
+    });
+    panel.querySelectorAll('.filter-section-head').forEach(head => {
+      head.addEventListener('click', () => head.parentElement.classList.toggle('collapsed'));
+    });
+
+    const applyFilters = () => {
+      const selModels = [...panel.querySelectorAll('[data-fmodel]:checked')].map(i => i.value);
+      const selColors = [...panel.querySelectorAll('.swatch-btn.selected')].map(b => b.dataset.fcolor);
+      let visible = 0;
+      grid.querySelectorAll('.card').forEach(card => {
+        const cardColors = (card.dataset.colors || '').split('|').filter(Boolean);
+        const okModel = selModels.length === 0 || selModels.includes(card.dataset.model);
+        const okColor = selColors.length === 0 || selColors.some(c => cardColors.includes(c));
+        const show = okModel && okColor;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      let noRes = grid.querySelector('.no-results');
+      if (visible === 0) {
+        if (!noRes) {
+          noRes = document.createElement('div');
+          noRes.className = 'no-results';
+          noRes.textContent = 'Nenhuma chuteira encontrada com esse filtro.';
+          grid.appendChild(noRes);
+        }
+      } else if (noRes) {
+        noRes.remove();
+      }
+      const activeCount = selModels.length + selColors.length;
+      badge.style.display = activeCount > 0 ? 'inline-flex' : 'none';
+      badge.textContent = activeCount;
+      countText.textContent = activeCount > 0 ? `${visible} de ${parsed.length}` : '';
+    };
+
+    panel.querySelectorAll('[data-fmodel]').forEach(cb => cb.addEventListener('change', applyFilters));
+    panel.querySelectorAll('.swatch-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('selected');
+        applyFilters();
+      });
+    });
+    panel.querySelector('.filter-clear-link').addEventListener('click', () => {
+      panel.querySelectorAll('[data-fmodel]').forEach(cb => cb.checked = false);
+      panel.querySelectorAll('.swatch-btn.selected').forEach(b => b.classList.remove('selected'));
+      applyFilters();
+    });
+  });
+
+  // ================== CARRINHO ==================
+  const CART_KEY = 'dupechuteiras_cart';
+  const cartFab = document.getElementById('cartFab');
+  const cartBadge = document.getElementById('cartBadge');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartDrawer = document.getElementById('cartDrawer');
+  const cartClose = document.getElementById('cartClose');
+  const cartBody = document.getElementById('cartBody');
+  const cartTotalEl = document.getElementById('cartTotal');
+  const cartCheckout = document.getElementById('cartCheckout');
+  const cartClear = document.getElementById('cartClear');
+  const toastEl = document.getElementById('toast');
+  const miniCart = document.getElementById('miniCart');
+  const miniCartItem = document.getElementById('miniCartItem');
+  const miniCartTotal = document.getElementById('miniCartTotal');
+  const miniCartGoto = document.getElementById('miniCartGoto');
+
+  function loadCart() {
+    try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  }
+  function priceToNumber(priceStr) {
+    return parseFloat(String(priceStr).replace(/\./g, '').replace(',', '.')) || 0;
+  }
+  function formatBRL(n) {
+    return n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toastEl.classList.remove('show'), 2400);
+  }
+
+  function showMiniCart(product) {
+    const cart = loadCart();
+    const media = product.img
+      ? `<img src="${product.img}" alt="${product.brand} ${product.model}" onerror="imgFallback(this)">`
+      : `<div class="mc-media-fallback"></div>`;
+    miniCartItem.innerHTML = `
+      ${media}
+      <div class="mini-cart-info">
+        <span class="mc-brand">${product.brand}</span>
+        <p class="mc-name">${product.model}</p>
+        ${product.color ? `<span class="mc-color">${product.color}</span>` : ''}
+        <div class="mini-cart-added">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Adicionado ao carrinho
+        </div>
+      </div>`;
+    const total = cart.reduce((s, i) => s + priceToNumber(i.price) * i.qty, 0);
+    miniCartTotal.textContent = `R$ ${formatBRL(total)}`;
+    miniCart.classList.add('show');
+    clearTimeout(showMiniCart._t);
+    showMiniCart._t = setTimeout(() => miniCart.classList.remove('show'), 5000);
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.header-cart-wrap')) return;
+    // não fecha o mini-carrinho no mesmo clique que acabou de adicionar o item
+    if (e.target.closest('[data-add]') || e.target.closest('.btn-add-cart')) return;
+    miniCart.classList.remove('show');
+  });
+  miniCartGoto.addEventListener('click', () => {
+    miniCart.classList.remove('show');
+    openCart();
+  });
+
+  function addToCart(id) {
+    const product = PRODUCT_INDEX[id];
+    if (!product) return;
+    const cart = loadCart();
+    const existing = cart.find(i => i.id === id);
+    if (existing) existing.qty += 1;
+    else cart.push({ ...product, qty: 1 });
+    saveCart(cart);
+    renderCart();
+    showMiniCart(product);
+  }
+  function removeFromCart(id) {
+    saveCart(loadCart().filter(i => i.id !== id));
+    renderCart();
+  }
+  function changeQty(id, delta) {
+    const cart = loadCart();
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    const filtered = item.qty <= 0 ? cart.filter(i => i.id !== id) : cart;
+    saveCart(filtered);
+    renderCart();
+  }
+  function clearCart() {
+    saveCart([]);
+    renderCart();
+  }
+
+  function renderCart() {
+    const cart = loadCart();
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    cartBadge.style.display = count > 0 ? 'flex' : 'none';
+    cartBadge.textContent = count;
+
+    if (cart.length === 0) {
+      cartBody.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione chuteiras para continuar.</div>';
+    } else {
+      cartBody.innerHTML = cart.map(item => {
+        const media = item.img
+          ? `<img src="${item.img}" alt="${item.brand} ${item.model}" onerror="imgFallback(this)">`
+          : `<div style="width:64px;height:64px;border-radius:6px;background:var(--navy);flex-shrink:0;"></div>`;
+        const subtotal = priceToNumber(item.price) * item.qty;
+        return `
+          <div class="cart-item">
+            ${media}
+            <div class="cart-item-info">
+              <span class="ci-brand">${item.brand}</span>
+              <span class="ci-name">${item.model}</span>
+              ${item.color ? `<span class="ci-color">${item.color}</span>` : ''}
+              <div class="cart-item-row">
+                <div class="qty-ctrl">
+                  <button type="button" data-qty-minus="${item.id}">−</button>
+                  <span>${item.qty}</span>
+                  <button type="button" data-qty-plus="${item.id}">+</button>
+                </div>
+                <span class="cart-item-price">R$ ${formatBRL(subtotal)}</span>
+              </div>
+              <button type="button" class="cart-remove" data-remove="${item.id}">Remover</button>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    const total = cart.reduce((s, i) => s + priceToNumber(i.price) * i.qty, 0);
+    cartTotalEl.textContent = `R$ ${formatBRL(total)}`;
+  }
+
+  cartBody.addEventListener('click', (e) => {
+    const plus = e.target.closest('[data-qty-plus]');
+    const minus = e.target.closest('[data-qty-minus]');
+    const rem = e.target.closest('[data-remove]');
+    if (plus) changeQty(plus.dataset.qtyPlus, 1);
+    if (minus) changeQty(minus.dataset.qtyMinus, -1);
+    if (rem) removeFromCart(rem.dataset.remove);
+  });
+
+  document.body.addEventListener('click', (e) => {
+    const addBtn = e.target.closest('[data-add]');
+    const buyBtn = e.target.closest('[data-buy]');
+    const card = e.target.closest('.card');
+    if (addBtn) addToCart(addBtn.dataset.add);
+    if (buyBtn) quickBuy(buyBtn.dataset.buy);
+    if (card && !addBtn && !buyBtn) openProductModal(card.querySelector('[data-product-id]')?.dataset.productId);
+
+    const sizeBtn = e.target.closest('.size-btn');
+    if (sizeBtn) {
+      sizeBtn.parentElement.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      sizeBtn.classList.add('selected');
+    }
+  });
+
+  let currentProductId = null;
+  function openProductModal(productId) {
+    if (!productId) return;
+    const product = PRODUCT_INDEX[productId];
+    if (!product) return;
+    
+    currentProductId = productId;
+    document.getElementById('modalBrand').textContent = product.brand;
+    document.getElementById('modalName').textContent = product.model;
+    document.getElementById('modalPrice').textContent = `R$ ${product.price}`;
+    document.getElementById('modalColor').textContent = product.color || 'Variado';
+    document.getElementById('modalDescription').textContent = `${product.brand} ${product.model}. Chuteira de qualidade para campo profissional. Numeração de 35 a 46.`;
+    
+    const mediaEl = document.getElementById('modalMedia');
+    mediaEl.innerHTML = product.img 
+      ? `<img src="${product.img}" alt="${product.brand} ${product.model}" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)">`
+      : `<svg viewBox="0 0 120 80"><use href="#boot"/></svg>`;
+    
+    const sizeGrid = document.getElementById('sizeGrid');
+    sizeGrid.innerHTML = Array.from({length: 7}, (_, i) => {
+      const size = i + 37;
+      return `<button class="size-btn" data-size="${size}">${size}</button>`;
+    }).join('');
+    
+    document.getElementById('productModal').classList.add('open');
+  }
+  
+  function closeProductModal() {
+    document.getElementById('productModal').classList.remove('open');
+    currentProductId = null;
+  }
+  
+  function quickBuyFromModal() {
+    if (!currentProductId) return;
+    quickBuy(currentProductId);
+    closeProductModal();
+  }
+  
+  function addToCartFromModal() {
+    if (!currentProductId) return;
+    addToCart(currentProductId);
+    closeProductModal();
+  }
+
+  // Os botões do modal usam onclick="" no HTML, então essas funções
+  // precisam existir no escopo global (window) para serem encontradas.
+  window.closeProductModal = closeProductModal;
+  window.quickBuyFromModal = quickBuyFromModal;
+  window.addToCartFromModal = addToCartFromModal;
+
+  document.getElementById('productModal').addEventListener('click', (e) => {
+    if (e.target.id === 'productModal') closeProductModal();
+  });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProductModal();
+  });
+
+  function openCart() { cartOverlay.classList.add('open'); cartDrawer.classList.add('open'); }
+  function closeCart() { cartOverlay.classList.remove('open'); cartDrawer.classList.remove('open'); }
+  cartFab.addEventListener('click', openCart);
+  cartClose.addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', closeCart);
+  cartClear.addEventListener('click', () => {
+    if (confirm('Esvaziar o carrinho?')) clearCart();
+  });
+
+  // ---- Envio para o WhatsApp (texto + imagem quando possível) ----
+  async function urlToFile(url, filename) {
+    try {
+      const res = await fetch(url);
+      const blob = await res.blob();
+      return new File([blob], filename, { type: blob.type || 'image/jpeg' });
+    } catch (e) { return null; }
+  }
+
+  async function sendToWhatsApp(items, message) {
+    const files = (await Promise.all(
+      items.filter(i => i.img).map((i, idx) => urlToFile(i.img, `chuteira-${idx}.jpg`))
+    )).filter(Boolean);
+
+    if (files.length && navigator.canShare && navigator.canShare({ files })) {
+      try {
+        await navigator.share({ files, text: message, title: 'Dupe Chuteiras' });
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') return; // usuário cancelou o compartilhamento
+        // se falhar, cai no link direto do WhatsApp abaixo
+      }
+    }
+    window.open(`https://wa.me/${WHATS_NUM}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  }
+
+  function quickBuy(id) {
+    const product = PRODUCT_INDEX[id];
+    if (!product) return;
+    const message = `Olá! Tenho interesse na chuteira ${product.brand} ${product.model}${product.color ? ' — ' + product.color : ''} (R$ ${product.price}).`;
+    sendToWhatsApp([product], message);
+  }
+
+  cartCheckout.addEventListener('click', () => {
+    const cart = loadCart();
+    if (cart.length === 0) { showToast('Seu carrinho está vazio.'); return; }
+    const lines = cart.map(i =>
+      `• ${i.qty}x ${i.brand} ${i.model}${i.color ? ' — ' + i.color : ''} — R$ ${formatBRL(priceToNumber(i.price) * i.qty)}`
+    );
+    const total = cart.reduce((s, i) => s + priceToNumber(i.price) * i.qty, 0);
+    const message = `Olá! Quero fazer o seguinte pedido na Dupe Chuteiras:\n\n${lines.join('\n')}\n\nTotal: R$ ${formatBRL(total)}`;
+    sendToWhatsApp(cart, message);
+  });
+
+  renderCart();
+});
+</script>
+
+<section class="trust" id="confianca">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+      <div>
+        <h4>Modelos de qualidade</h4>
+        <p>Nike, Adidas, Mizuno, Puma e Joma com ótimo acabamento, sem enrolação.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <div>
+        <h4>Envio para todo o Brasil</h4>
+        <p>Rastreio em tempo real do pedido até a chuteira chegar na sua porta.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <div>
+        <h4>Atendimento rápido</h4>
+        <p>Dúvida sobre numeração ou modelo? Resposta no mesmo dia pelo WhatsApp.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2 4 4L19 4l2 2-12 12z"/></svg>
+      <div>
+        <h4>Campo, society e futsal</h4>
+        <p>Um catálogo só, organizado por categoria e por marca, sem perder tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div>
+      <div class="foot-brand">
+        <img src="assets/logo-dupe.png" alt="Dupe Chuteiras" onerror="imgFallback(this)">
+        <strong>DUPE CHUTEIRAS</strong>
+      </div>
+      <p>Especializada em chuteiras de campo, society e futsal, com as maiores marcas do mercado reunidas em um só lugar.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#colecao">Coleção</a></li>
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="#confianca">Por que comprar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Fale com a gente</h5>
+      <ul>
+        <li><a href="https://wa.me/554891168661" target="_blank" rel="noopener">WhatsApp: +55 48 9116-8661</a></li>
+        <li><a href="https://www.instagram.com/dupechuteiras" target="_blank" rel="noopener">Instagram: @dupechuteiras</a></li>
+        <li><a href="mailto:dupechuteiras@gmail.com">dupechuteiras@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Dupe Chuteiras. Todos os direitos reservados.</span>
+    <span>Site desenvolvido para demonstração.</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const catButtons = document.querySelectorAll('.segment button');
+  const catPanels = document.querySelectorAll('.cat-panel');
+  catButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.cat;
+      catPanels.forEach(p => {
+        p.style.display = (p.dataset.panel === target) ? '' : 'none';
+      });
+    });
+  });
+
+  document.querySelectorAll('.cat-panel').forEach(panel => {
+    const subButtons = panel.querySelectorAll('.subtabs button');
+    const subPanels = panel.querySelectorAll('[data-sub-panel]');
+    subButtons.forEach(sb => {
+      sb.addEventListener('click', () => {
+        subButtons.forEach(b => b.classList.remove('active'));
+        sb.classList.add('active');
+        const target = sb.dataset.sub;
+        subPanels.forEach(sp => {
+          sp.style.display = (sp.dataset.subPanel === target) ? '' : 'none';
+        });
+        document.querySelectorAll('.filter-panel.open').forEach(p => p.classList.remove('open'));
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
