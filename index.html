@@ -159,6 +159,26 @@
     margin: 0 0 8px; color: var(--navy);
   }
   .brands-strip p{ margin:0; color:#55547a; font-size:0.98rem; }
+
+  /* ---------- Novidades: vitrine com scroll horizontal ---------- */
+  .novidades-strip{ background: var(--bg, #F4F4FA); border-bottom: 1px solid var(--line); padding: 30px 0; }
+  .novidades-head{ margin-bottom: 18px; }
+  .novidades-head h2{
+    font-family:'Racing Sans One', sans-serif; font-size: 1.7rem; margin:0 0 4px; color: var(--navy);
+  }
+  .novidades-head p{ margin:0; color:#6d6c92; font-size:0.92rem; }
+  .novidades-scroll{
+    display:flex; gap:16px; overflow-x:auto; padding-bottom:12px;
+    scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;
+  }
+  .novidades-scroll::-webkit-scrollbar{ height:6px; }
+  .novidades-scroll::-webkit-scrollbar-thumb{ background: var(--line); border-radius:6px; }
+  .novidades-scroll .card{
+    flex: 0 0 220px; scroll-snap-align:start;
+  }
+  @media (max-width: 640px){
+    .novidades-scroll .card{ flex-basis: 170px; }
+  }
   .brand-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap: 12px; }
   .brand-chips span{
     border: 2px solid var(--navy); color: var(--navy);
@@ -823,6 +843,16 @@
   </div>
 </section>
 
+<section class="novidades-strip" id="novidades">
+  <div class="wrap">
+    <div class="novidades-head">
+      <h2>Novidades</h2>
+      <p>Os lançamentos mais recentes, arraste para o lado para ver mais.</p>
+    </div>
+    <div class="novidades-scroll" id="novidadesScroll"></div>
+  </div>
+</section>
+
 <section class="catalog" id="colecao">
   <div class="wrap">
     <div class="catalog-head">
@@ -1062,7 +1092,28 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Mercurial Vapor 16 Elite FG — Branco e Dourado",                     img: "products/nike-campo-vapor/vapor-37.png" },
       { name: "Mercurial Vapor 16 Elite FG — Creme e Preto",                        img: "products/nike-campo-vapor/vapor-38.jpg" },
       { name: "Mercurial Vapor 16 Elite FG — Rosa e Amarelo",                  img: "products/nike-campo-vapor/vapor-39.jpg" },
-      { name: "Mercurial Vapor 16 Elite FG — Rosa e Branco",                        img: "products/nike-campo-vapor/vapor-40.png" }
+      { name: "Mercurial Vapor 16 Elite FG — Rosa e Branco",                        img: "products/nike-campo-vapor/vapor-40.png" },
+
+      { name: "Mercurial Vapor 17 Elite FG — Preto e Azul",                    img: "products/nike-campo-vapor17/vapor17-01.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Roxo e Branco",                   img: "products/nike-campo-vapor17/vapor17-02.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-03.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Laranja",                img: "products/nike-campo-vapor17/vapor17-04.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-05.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Dourado e Preto",                 img: "products/nike-campo-vapor17/vapor17-06.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-07.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Vermelho",               img: "products/nike-campo-vapor17/vapor17-08.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Preto",                           img: "products/nike-campo-vapor17/vapor17-09.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Amarelo e Branco",                img: "products/nike-campo-vapor17/vapor17-10.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Azul e Branco",                   img: "products/nike-campo-vapor17/vapor17-11.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Roxo",                   img: "products/nike-campo-vapor17/vapor17-12.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Rosa e Roxo",                     img: "products/nike-campo-vapor17/vapor17-13.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Dourado",                 img: "products/nike-campo-vapor17/vapor17-14.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja",                         img: "products/nike-campo-vapor17/vapor17-15.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-16.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Preto",                 img: "products/nike-campo-vapor17/vapor17-17.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-18.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Vermelho e Dourado",              img: "products/nike-campo-vapor17/vapor17-19.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-20.jpg" }
     ] },
     adidas: { brand: "ADIDAS", price: PRICE.campo, models: [
       { name: "Copa Pure III Elite FG — Branco, Vermelho e Preto",     img: "products/adidas-campo/3e184e34.png" },
@@ -1652,6 +1703,40 @@ document.addEventListener('DOMContentLoaded', function () {
       applyFilters();
     });
   });
+
+  // ---- Novidades: vitrine com scroll horizontal, fora do sistema de abas ----
+  const NOVIDADES_ITEMS = [
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Preto e Azul",       img: "products/nike-campo-vapor17/vapor17-01.jpg" },
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Dourado e Preto",    img: "products/nike-campo-vapor17/vapor17-06.jpg" },
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Preto",              img: "products/nike-campo-vapor17/vapor17-09.png" },
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Rosa e Roxo",        img: "products/nike-campo-vapor17/vapor17-13.jpg" },
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Laranja e Preto",    img: "products/nike-campo-vapor17/vapor17-17.jpg" },
+    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Vermelho e Dourado", img: "products/nike-campo-vapor17/vapor17-19.png" }
+  ];
+  const novidadesScroll = document.getElementById('novidadesScroll');
+  if (novidadesScroll) {
+    NOVIDADES_ITEMS.forEach(item => {
+      const id = `nv${PRODUCT_SEQ++}`;
+      const fullName = `${item.model} — ${item.color}`;
+      const product = { id, brand: item.brand, model: fullName, color: item.color, fullName, price: PRICE.campo, img: item.img };
+      PRODUCT_INDEX[id] = product;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-media"><img src="${item.img}" alt="${item.brand} ${fullName}" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)"></div>
+        <div class="card-body">
+          <span class="brand-name">${item.brand}</span>
+          <h3>${fullName}</h3>
+          <div class="price-row card-actions">
+            <div class="price-col"><span class="price">R$ ${PRICE.campo}</span></div>
+            <button type="button" class="btn-add" data-add="${id}">+ Carrinho</button>
+            <button type="button" class="btn-buy" data-buy="${id}">Comprar</button>
+          </div>
+        </div>
+        <div data-product-id="${id}" style="display:none;"></div>`;
+      novidadesScroll.appendChild(card);
+    });
+  }
 
   // ================== CARRINHO ==================
   const CART_KEY = 'dupechuteiras_cart';
