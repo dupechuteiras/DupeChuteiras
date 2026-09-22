@@ -425,9 +425,12 @@
     .subtabs button{ padding: 10px 16px; min-height:40px; }
     .buy-btn{ padding: 10px 16px; min-height:40px; display:flex; align-items:center; justify-content:center; }
     .hero-actions .btn-primary, .hero-actions .btn-ghost{ width:100%; justify-content:center; }
-    .segment{ flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .segment{ flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-right: 20px; scroll-padding-right: 20px; }
     .segment::-webkit-scrollbar{ display:none; }
-    .segment button{ white-space: nowrap; margin-right: 20px; }
+    .segment button{ white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+    .subtabs{ flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-right: 20px; }
+    .subtabs::-webkit-scrollbar{ display:none; }
+    .subtabs button{ white-space: nowrap; flex-shrink: 0; }
   }
 
   /* ---------- Filtros (estilo compacto) ---------- */
@@ -971,86 +974,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const CATALOG = {
     nike: { brand: "NIKE", price: PRICE.campo, models: [
-      { name: "Hypervenom Phantom FG — Rosa e Azul",                  img: "products/nike-campo/nike-01.png" },
-      { name: "Hypervenom Phantom FG — Amarelo e Azul",          img: "products/nike-campo/nike-02.png" },
-      { name: "Hypervenom Phantom FG — Laranja e Branco",             img: "products/nike-campo/nike-03.png" },
-      { name: "Hypervenom Phantom FG — Prata, Rosa e Dourado",        img: "products/nike-campo/nike-04.png" },
-      { name: "Hypervenom Phantom FG — Dourado e Amarelo",       img: "products/nike-campo/nike-05.png" },
-      { name: "Hypervenom Phantom FG — Laranja e Preto",              img: "products/nike-campo/nike-06.png" },
-      { name: "Hypervenom Phantom FG — Coral e Amarelo",         img: "products/nike-campo/nike-07.png" },
-      { name: "Premier III FG — Preto, Branco e Dourado",             img: "products/nike-campo/nike-08.png" },
-      { name: "Premier III FG — Branco e Vermelho",                   img: "products/nike-campo/nike-09.png" },
-      { name: "Premier III FG — Branco, Azul e Rosa",                 img: "products/nike-campo/nike-10.png" },
-      { name: "Tiempo Legend 10 Elite FG — Azul e Rosa",              img: "products/nike-campo/nike-11.png" },
-      { name: "Tiempo Legend 10 Elite FG — Branco, Azul e Dourado",   img: "products/nike-campo/nike-12.png" },
-      { name: "Tiempo Legend 10 Elite FG — Preto e Azul",             img: "products/nike-campo/nike-13.png" },
-      { name: "Tiempo Legend 10 Elite FG — Laranja e Preto",          img: "products/nike-campo/nike-14.jpg" },
-      { name: "Tiempo Legend 10 Elite FG — Verde e Roxo",        img: "products/nike-campo/nike-15.jpg" },
-      { name: "Tiempo Legend 10 Elite FG — Prata e Verde",       img: "products/nike-campo/nike-16.jpg" },
-      { name: "Tiempo Legend 10 Elite FG — Amarelo e Preto",    img: "products/nike-campo/nike-17.jpg" },
-      { name: "Tiempo Legend 10 Elite FG — Branco e Laranja",         img: "products/nike-campo/nike-18.jpg" },
-      { name: "Tiempo Legend 10 Elite FG — Coral",                  img: "products/nike-campo/nike-19.jpg" },
-      { name: "Premier III FG — Prata e Preto",                       img: "products/nike-campo/nike-20.png" },
-
-      { name: "Phantom 6 High Elite FG — Branco, Azul e Rosa",             img: "products/nike-campo-phantom6/p6-01.jpg" },
-      { name: "Phantom 6 Low Elite FG — Marinho, Laranja e Amarelo",  img: "products/nike-campo-phantom6/p6-02.png" },
-      { name: "Phantom 6 High Elite FG — Branco, Preto e Azul",            img: "products/nike-campo-phantom6/p6-03.png" },
-      { name: "Phantom 6 High Elite FG — Roxo, Laranja e Vermelho",          img: "products/nike-campo-phantom6/p6-04.png" },
-      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-05.png" },
-      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-06.png" },
-      { name: "Phantom 6 Low Elite FG — Preto e Coral",                    img: "products/nike-campo-phantom6/p6-07.jpg" },
-      { name: "Phantom 6 Low Elite FG — Grafite e Verde",             img: "products/nike-campo-phantom6/p6-08.png" },
-      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-09.jpg" },
-      { name: "Phantom 6 Low Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantom6/p6-10.png" },
-      { name: "Phantom 6 High Elite FG — Marinho, Laranja e Amarelo", img: "products/nike-campo-phantom6/p6-11.png" },
-      { name: "Phantom 6 Low Elite FG — Azul e Amarelo",        img: "products/nike-campo-phantom6/p6-12.png" },
-      { name: "Phantom 6 Low Elite FG — Coral, Roxo e Azul",            img: "products/nike-campo-phantom6/p6-13.png" },
-      { name: "Phantom 6 Low Elite FG — Branco e Preto",                   img: "products/nike-campo-phantom6/p6-14.png" },
-      { name: "Phantom 6 Low Elite FG — Creme, Azul e Amarelo",      img: "products/nike-campo-phantom6/p6-15.png" },
-      { name: "Phantom 6 Low Elite FG — Preto e Laranja",                  img: "products/nike-campo-phantom6/p6-16.png" },
-      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-17.png" },
-      { name: "Phantom 6 Low Elite FG — Azul, Laranja e Vermelho",      img: "products/nike-campo-phantom6/p6-18.png" },
-      { name: "Phantom 6 Low Elite FG — Branco, Azul e Laranja",     img: "products/nike-campo-phantom6/p6-19.png" },
-      { name: "Phantom 6 Low Elite FG — Cinza e Laranja", img: "products/nike-campo-phantom6/p6-20.png" },
-
-      { name: "Phantom GT2 High Elite FG — Preto e Azul",                    img: "products/nike-campo-phantomgt2/gt2-01.jpg" },
-      { name: "Phantom GT2 High Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantomgt2/gt2-02.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Rosa",           img: "products/nike-campo-phantomgt2/gt2-03.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Preto e Azul",               img: "products/nike-campo-phantomgt2/gt2-04.jpg" },
-      { name: "Phantom GT2 High Elite FG — Verde e Laranja",           img: "products/nike-campo-phantomgt2/gt2-05.jpg" },
-      { name: "Phantom GT2 High Elite FG — Verde e Laranja",     img: "products/nike-campo-phantomgt2/gt2-06.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Laranja",   img: "products/nike-campo-phantomgt2/gt2-07.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Azul e Amarelo",              img: "products/nike-campo-phantomgt2/gt2-08.jpg" },
-      { name: "Phantom GT2 High Elite FG — Creme e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-09.jpg" },
-      { name: "Phantom GT2 High Elite FG — Azul, Preto e Amarelo",     img: "products/nike-campo-phantomgt2/gt2-10.jpg" },
-      { name: "Phantom GT2 High Elite FG — Preto e Dourado",  img: "products/nike-campo-phantomgt2/gt2-11.jpg" },
-      { name: "Phantom GT2 High Elite FG — Branco, Amarelo e Coral",    img: "products/nike-campo-phantomgt2/gt2-12.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Azul, Preto e Amarelo", img: "products/nike-campo-phantomgt2/gt2-13.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Laranja e Amarelo",                img: "products/nike-campo-phantomgt2/gt2-14.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-15.jpg" },
-      { name: "Phantom GT2 High Elite FG — Amarelo e Laranja",               img: "products/nike-campo-phantomgt2/gt2-16.jpg" },
-      { name: "Phantom GT2 Low Elite FG — Branco, Verde e Azul",  img: "products/nike-campo-phantomgt2/gt2-17.jpg" },
-      { name: "Phantom GT2 High Elite FG — Azul e Amarelo",      img: "products/nike-campo-phantomgt2/gt2-18.jpg" },
-
-      { name: "Mercurial Superfly 9 Elite FG — Roxo e Preto",                       img: "products/nike-campo-superfly/superfly-01.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco, Azul e Verde",         img: "products/nike-campo-superfly/superfly-02.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco e Vermelho",                 img: "products/nike-campo-superfly/superfly-03.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-04.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Rosa e Preto",                img: "products/nike-campo-superfly/superfly-05.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Rosa",                         img: "products/nike-campo-superfly/superfly-06.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Amarelo",                     img: "products/nike-campo-superfly/superfly-07.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco e Multicor",            img: "products/nike-campo-superfly/superfly-08.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Verde e Roxo",                 img: "products/nike-campo-superfly/superfly-09.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco e Rosa",                img: "products/nike-campo-superfly/superfly-10.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Verde e Rosa",            img: "products/nike-campo-superfly/superfly-11.png" },
-      { name: "Mercurial Superfly 8 Elite FG — Branco",               img: "products/nike-campo-superfly/superfly-12.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco e Azul",                     img: "products/nike-campo-superfly/superfly-13.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-14.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Creme e Preto",                     img: "products/nike-campo-superfly/superfly-15.png" },
-      { name: "Mercurial Superfly 10 Elite FG — Branco, Dourado e Azul",            img: "products/nike-campo-superfly/superfly-16.png" },
-      { name: "Mercurial Superfly 9 Elite FG — Laranja e Preto",                    img: "products/nike-campo-superfly/superfly-17.jpg" },
-      { name: "Mercurial Superfly 10 Elite FG — Coral e Azul",                    img: "products/nike-campo-superfly/superfly-18.png" },
-      { name: "Mercurial Superfly 10 Elite SE FG — Cinza e Preto",                  img: "products/nike-campo-superfly/superfly-19.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Preto e Azul",                    img: "products/nike-campo-vapor17/vapor17-01.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Roxo e Branco",                   img: "products/nike-campo-vapor17/vapor17-02.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-03.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Laranja",                img: "products/nike-campo-vapor17/vapor17-04.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-05.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Dourado e Preto",                 img: "products/nike-campo-vapor17/vapor17-06.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-07.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Vermelho",               img: "products/nike-campo-vapor17/vapor17-08.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Preto",                           img: "products/nike-campo-vapor17/vapor17-09.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Amarelo e Branco",                img: "products/nike-campo-vapor17/vapor17-10.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Azul e Branco",                   img: "products/nike-campo-vapor17/vapor17-11.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Branco e Roxo",                   img: "products/nike-campo-vapor17/vapor17-12.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Rosa e Roxo",                     img: "products/nike-campo-vapor17/vapor17-13.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Dourado",                 img: "products/nike-campo-vapor17/vapor17-14.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja",                         img: "products/nike-campo-vapor17/vapor17-15.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-16.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Preto",                 img: "products/nike-campo-vapor17/vapor17-17.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-18.jpg" },
+      { name: "Mercurial Vapor 17 Elite FG — Vermelho e Dourado",              img: "products/nike-campo-vapor17/vapor17-19.png" },
+      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-20.jpg" },
 
       { name: "Mercurial Vapor 16 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor/vapor-01.jpg" },
       { name: "Mercurial Vapor 16 Elite FG — Branco e Rosa",                        img: "products/nike-campo-vapor/vapor-02.png" },
@@ -1094,47 +1037,90 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Mercurial Vapor 16 Elite FG — Rosa e Amarelo",                  img: "products/nike-campo-vapor/vapor-39.jpg" },
       { name: "Mercurial Vapor 16 Elite FG — Rosa e Branco",                        img: "products/nike-campo-vapor/vapor-40.png" },
 
-      { name: "Mercurial Vapor 17 Elite FG — Preto e Azul",                    img: "products/nike-campo-vapor17/vapor17-01.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Roxo e Branco",                   img: "products/nike-campo-vapor17/vapor17-02.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-03.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Branco e Laranja",                img: "products/nike-campo-vapor17/vapor17-04.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-05.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Dourado e Preto",                 img: "products/nike-campo-vapor17/vapor17-06.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-07.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Branco e Vermelho",               img: "products/nike-campo-vapor17/vapor17-08.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Preto",                           img: "products/nike-campo-vapor17/vapor17-09.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Amarelo e Branco",                img: "products/nike-campo-vapor17/vapor17-10.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Azul e Branco",                   img: "products/nike-campo-vapor17/vapor17-11.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Branco e Roxo",                   img: "products/nike-campo-vapor17/vapor17-12.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Rosa e Roxo",                     img: "products/nike-campo-vapor17/vapor17-13.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Verde e Dourado",                 img: "products/nike-campo-vapor17/vapor17-14.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Laranja",                         img: "products/nike-campo-vapor17/vapor17-15.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Verde e Roxo",                    img: "products/nike-campo-vapor17/vapor17-16.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Laranja e Preto",                 img: "products/nike-campo-vapor17/vapor17-17.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Verde e Branco",                  img: "products/nike-campo-vapor17/vapor17-18.jpg" },
-      { name: "Mercurial Vapor 17 Elite FG — Vermelho e Dourado",              img: "products/nike-campo-vapor17/vapor17-19.png" },
-      { name: "Mercurial Vapor 17 Elite FG — Laranja e Branco",                img: "products/nike-campo-vapor17/vapor17-20.jpg" }
+      { name: "Mercurial Superfly 9 Elite FG — Roxo e Preto",                       img: "products/nike-campo-superfly/superfly-01.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco, Azul e Verde",         img: "products/nike-campo-superfly/superfly-02.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Vermelho",                 img: "products/nike-campo-superfly/superfly-03.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-04.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Preto",                img: "products/nike-campo-superfly/superfly-05.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa",                         img: "products/nike-campo-superfly/superfly-06.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Amarelo",                     img: "products/nike-campo-superfly/superfly-07.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Multicor",            img: "products/nike-campo-superfly/superfly-08.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Verde e Roxo",                 img: "products/nike-campo-superfly/superfly-09.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Rosa",                img: "products/nike-campo-superfly/superfly-10.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Verde e Rosa",            img: "products/nike-campo-superfly/superfly-11.png" },
+      { name: "Mercurial Superfly 8 Elite FG — Branco",               img: "products/nike-campo-superfly/superfly-12.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco e Azul",                     img: "products/nike-campo-superfly/superfly-13.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Rosa e Azul",                 img: "products/nike-campo-superfly/superfly-14.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Creme e Preto",                     img: "products/nike-campo-superfly/superfly-15.png" },
+      { name: "Mercurial Superfly 10 Elite FG — Branco, Dourado e Azul",            img: "products/nike-campo-superfly/superfly-16.png" },
+      { name: "Mercurial Superfly 9 Elite FG — Laranja e Preto",                    img: "products/nike-campo-superfly/superfly-17.jpg" },
+      { name: "Mercurial Superfly 10 Elite FG — Coral e Azul",                    img: "products/nike-campo-superfly/superfly-18.png" },
+      { name: "Mercurial Superfly 10 Elite SE FG — Cinza e Preto",                  img: "products/nike-campo-superfly/superfly-19.png" },
+
+      { name: "Phantom GT2 High Elite FG — Preto e Azul",                    img: "products/nike-campo-phantomgt2/gt2-01.jpg" },
+      { name: "Phantom GT2 High Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantomgt2/gt2-02.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Rosa",           img: "products/nike-campo-phantomgt2/gt2-03.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Preto e Azul",               img: "products/nike-campo-phantomgt2/gt2-04.jpg" },
+      { name: "Phantom GT2 High Elite FG — Verde e Laranja",           img: "products/nike-campo-phantomgt2/gt2-05.jpg" },
+      { name: "Phantom GT2 High Elite FG — Verde e Laranja",     img: "products/nike-campo-phantomgt2/gt2-06.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Amarelo e Laranja",   img: "products/nike-campo-phantomgt2/gt2-07.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Azul e Amarelo",              img: "products/nike-campo-phantomgt2/gt2-08.jpg" },
+      { name: "Phantom GT2 High Elite FG — Creme e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-09.jpg" },
+      { name: "Phantom GT2 High Elite FG — Azul, Preto e Amarelo",     img: "products/nike-campo-phantomgt2/gt2-10.jpg" },
+      { name: "Phantom GT2 High Elite FG — Preto e Dourado",  img: "products/nike-campo-phantomgt2/gt2-11.jpg" },
+      { name: "Phantom GT2 High Elite FG — Branco, Amarelo e Coral",    img: "products/nike-campo-phantomgt2/gt2-12.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Azul, Preto e Amarelo", img: "products/nike-campo-phantomgt2/gt2-13.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Laranja e Amarelo",                img: "products/nike-campo-phantomgt2/gt2-14.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantomgt2/gt2-15.jpg" },
+      { name: "Phantom GT2 High Elite FG — Amarelo e Laranja",               img: "products/nike-campo-phantomgt2/gt2-16.jpg" },
+      { name: "Phantom GT2 Low Elite FG — Branco, Verde e Azul",  img: "products/nike-campo-phantomgt2/gt2-17.jpg" },
+      { name: "Phantom GT2 High Elite FG — Azul e Amarelo",      img: "products/nike-campo-phantomgt2/gt2-18.jpg" },
+
+      { name: "Phantom 6 High Elite FG — Branco, Azul e Rosa",             img: "products/nike-campo-phantom6/p6-01.jpg" },
+      { name: "Phantom 6 Low Elite FG — Marinho, Laranja e Amarelo",  img: "products/nike-campo-phantom6/p6-02.png" },
+      { name: "Phantom 6 High Elite FG — Branco, Preto e Azul",            img: "products/nike-campo-phantom6/p6-03.png" },
+      { name: "Phantom 6 High Elite FG — Roxo, Laranja e Vermelho",          img: "products/nike-campo-phantom6/p6-04.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-05.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-06.png" },
+      { name: "Phantom 6 Low Elite FG — Preto e Coral",                    img: "products/nike-campo-phantom6/p6-07.jpg" },
+      { name: "Phantom 6 Low Elite FG — Grafite e Verde",             img: "products/nike-campo-phantom6/p6-08.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Rosa",              img: "products/nike-campo-phantom6/p6-09.jpg" },
+      { name: "Phantom 6 Low Elite FG — Branco, Verde e Azul",       img: "products/nike-campo-phantom6/p6-10.png" },
+      { name: "Phantom 6 High Elite FG — Marinho, Laranja e Amarelo", img: "products/nike-campo-phantom6/p6-11.png" },
+      { name: "Phantom 6 Low Elite FG — Azul e Amarelo",        img: "products/nike-campo-phantom6/p6-12.png" },
+      { name: "Phantom 6 Low Elite FG — Coral, Roxo e Azul",            img: "products/nike-campo-phantom6/p6-13.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Preto",                   img: "products/nike-campo-phantom6/p6-14.png" },
+      { name: "Phantom 6 Low Elite FG — Creme, Azul e Amarelo",      img: "products/nike-campo-phantom6/p6-15.png" },
+      { name: "Phantom 6 Low Elite FG — Preto e Laranja",                  img: "products/nike-campo-phantom6/p6-16.png" },
+      { name: "Phantom 6 Low Elite FG — Branco e Rosa",                    img: "products/nike-campo-phantom6/p6-17.png" },
+      { name: "Phantom 6 Low Elite FG — Azul, Laranja e Vermelho",      img: "products/nike-campo-phantom6/p6-18.png" },
+      { name: "Phantom 6 Low Elite FG — Branco, Azul e Laranja",     img: "products/nike-campo-phantom6/p6-19.png" },
+      { name: "Phantom 6 Low Elite FG — Cinza e Laranja", img: "products/nike-campo-phantom6/p6-20.png" },
+
+      { name: "Hypervenom Phantom FG — Rosa e Azul",                  img: "products/nike-campo/nike-01.png" },
+      { name: "Hypervenom Phantom FG — Amarelo e Azul",          img: "products/nike-campo/nike-02.png" },
+      { name: "Hypervenom Phantom FG — Laranja e Branco",             img: "products/nike-campo/nike-03.png" },
+      { name: "Hypervenom Phantom FG — Prata, Rosa e Dourado",        img: "products/nike-campo/nike-04.png" },
+      { name: "Hypervenom Phantom FG — Dourado e Amarelo",       img: "products/nike-campo/nike-05.png" },
+      { name: "Hypervenom Phantom FG — Laranja e Preto",              img: "products/nike-campo/nike-06.png" },
+      { name: "Hypervenom Phantom FG — Coral e Amarelo",         img: "products/nike-campo/nike-07.png" },
+      { name: "Premier III FG — Preto, Branco e Dourado",             img: "products/nike-campo/nike-08.png" },
+      { name: "Premier III FG — Branco e Vermelho",                   img: "products/nike-campo/nike-09.png" },
+      { name: "Premier III FG — Branco, Azul e Rosa",                 img: "products/nike-campo/nike-10.png" },
+      { name: "Tiempo Legend 10 Elite FG — Azul e Rosa",              img: "products/nike-campo/nike-11.png" },
+      { name: "Tiempo Legend 10 Elite FG — Branco, Azul e Dourado",   img: "products/nike-campo/nike-12.png" },
+      { name: "Tiempo Legend 10 Elite FG — Preto e Azul",             img: "products/nike-campo/nike-13.png" },
+      { name: "Tiempo Legend 10 Elite FG — Laranja e Preto",          img: "products/nike-campo/nike-14.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Verde e Roxo",        img: "products/nike-campo/nike-15.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Prata e Verde",       img: "products/nike-campo/nike-16.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Amarelo e Preto",    img: "products/nike-campo/nike-17.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Branco e Laranja",         img: "products/nike-campo/nike-18.jpg" },
+      { name: "Tiempo Legend 10 Elite FG — Coral",                  img: "products/nike-campo/nike-19.jpg" },
+      { name: "Premier III FG — Prata e Preto",                       img: "products/nike-campo/nike-20.png" },
     ] },
     adidas: { brand: "ADIDAS", price: PRICE.campo, models: [
-      { name: "Copa Pure III Elite FG — Branco, Vermelho e Preto",     img: "products/adidas-campo/3e184e34.png" },
-      { name: "Copa Pure III Elite Laceless FG — Branco, Preto e Vermelho", img: "products/adidas-campo/5bec2639.png" },
-      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/6a56bd61.png" },
-      { name: "Copa Pure III Elite FG — Branco e Azul",               img: "products/adidas-campo/6d8ea455.png" },
-      { name: "Copa Pure III Elite Laceless FG — Preto, Vermelho e Branco", img: "products/adidas-campo/7b00e287.png" },
-      { name: "Copa Pure III Elite FG — Prata, Azul e Verde",         img: "products/adidas-campo/32f8528c.png" },
-      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/33d14cd8.png" },
-      { name: "Copa Pure III Elite FG — Amarelo e Preto",        img: "products/adidas-campo/433f6a07.png" },
-      { name: "Copa Pure III Elite FG — Cinza, Preto e Amarelo",      img: "products/adidas-campo/1478b9f9.jpg" },
-      { name: "Copa Pure III Elite Laceless FG — Preto e Verde", img: "products/adidas-campo/4292e4f7.png" },
-      { name: "Copa Pure III Elite Laceless FG — Preto, Roxo e Rosa", img: "products/adidas-campo/11943798.png" },
-      { name: "Copa Pure III Elite Laceless FG — Branco e Azul", img: "products/adidas-campo/a03081b4.png" },
-      { name: "Copa Pure III Elite FG — Amarelo, Preto e Branco", img: "products/adidas-campo/ac0be76d.jpg" },
-      { name: "Copa Pure III Elite Laceless FG — Preto e Laranja",    img: "products/adidas-campo/ac1482f5.png" },
-      { name: "Copa Pure III Elite Laceless FG — Vermelho e Branco",  img: "products/adidas-campo/acfca00e.png" },
-      { name: "Copa Pure III Elite Laceless FG — Prata e Branco",     img: "products/adidas-campo/bbd9da13.png" },
-      { name: "Copa Pure III Elite Laceless FG — Branco, Laranja e Azul", img: "products/adidas-campo/cc6a0ce9.png" },
-      { name: "Copa Pure III Elite Laceless FG — Branco e Dourado",   img: "products/adidas-campo/d63a7117.png" },
-      { name: "Copa Pure III Elite FG — Preto e Vermelho",            img: "products/adidas-campo/e4818b03.png" },
+      { name: "F50 Elite FG — Verde e Azul",                           img: "products/adidas-campo-f50/f50-16.png" },
+      { name: "F50 Elite Laceless FG — Verde e Azul",                  img: "products/adidas-campo-f50/f50-17.png" },
 
       { name: "F50 Elite Laceless FG — Amarelo, Preto e Coral",   img: "products/adidas-campo-f50/f50-01.png" },
       { name: "F50 Elite Laceless FG — Branco, Roxo e Rosa",           img: "products/adidas-campo-f50/f50-02.png" },
@@ -1151,6 +1137,11 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "F50 Hyperfast Elite Laceless FG — Azul",          img: "products/adidas-campo-f50/f50-13.png" },
       { name: "F50 Elite Laceless FG — Preto e Azul",                  img: "products/adidas-campo-f50/f50-14.png" },
       { name: "F50 Hyperfast Elite Laceless FG — Roxo e Amarelo",      img: "products/adidas-campo-f50/f50-15.png" },
+
+      { name: "Predator Elite FG Foldover Tongue — Branco e Amarelo Neon",   img: "products/adidas-campo-predator/predator-21.png" },
+      { name: "Predator Elite FG Foldover Tongue — Amarelo Neon e Laranja", img: "products/adidas-campo-predator/predator-22.png" },
+      { name: "Predator Elite FG Foldover Tongue — Preto, Branco e Vermelho", img: "products/adidas-campo-predator/predator-23.png" },
+      { name: "Predator Elite FG Foldover Tongue — Azul, Branco e Vermelho", img: "products/adidas-campo-predator/predator-24.png" },
 
       { name: "Predator Elite FG — Coral e Branco",                              img: "products/adidas-campo-predator/predator-01.png" },
       { name: "Predator Elite FG Foldover Tongue — Branco e Dourado",            img: "products/adidas-campo-predator/predator-02.png" },
@@ -1171,7 +1162,27 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Predator Elite Laceless FG — Amarelo e Branco",             img: "products/adidas-campo-predator/predator-17.png" },
       { name: "Predator Elite Laceless AG — Branco e Prata",                    img: "products/adidas-campo-predator/predator-18.png" },
       { name: "Predator Elite Laceless FG — Coral e Dourado",                   img: "products/adidas-campo-predator/predator-19.png" },
-      { name: "Predator Elite Laceless FG — Vermelho",                          img: "products/adidas-campo-predator/predator-20.png" }
+      { name: "Predator Elite Laceless FG — Vermelho",                          img: "products/adidas-campo-predator/predator-20.png" },
+
+      { name: "Copa Pure III Elite FG — Branco, Vermelho e Preto",     img: "products/adidas-campo/3e184e34.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco, Preto e Vermelho", img: "products/adidas-campo/5bec2639.png" },
+      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/6a56bd61.png" },
+      { name: "Copa Pure III Elite FG — Branco e Azul",               img: "products/adidas-campo/6d8ea455.png" },
+      { name: "Copa Pure III Elite Laceless FG — Preto, Vermelho e Branco", img: "products/adidas-campo/7b00e287.png" },
+      { name: "Copa Pure III Elite FG — Prata, Azul e Verde",         img: "products/adidas-campo/32f8528c.png" },
+      { name: "Copa Pure III Elite FG — Branco e Dourado",            img: "products/adidas-campo/33d14cd8.png" },
+      { name: "Copa Pure III Elite FG — Amarelo e Preto",        img: "products/adidas-campo/433f6a07.png" },
+      { name: "Copa Pure III Elite FG — Cinza, Preto e Amarelo",      img: "products/adidas-campo/1478b9f9.jpg" },
+      { name: "Copa Pure III Elite Laceless FG — Preto e Verde", img: "products/adidas-campo/4292e4f7.png" },
+      { name: "Copa Pure III Elite Laceless FG — Preto, Roxo e Rosa", img: "products/adidas-campo/11943798.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco e Azul", img: "products/adidas-campo/a03081b4.png" },
+      { name: "Copa Pure III Elite FG — Amarelo, Preto e Branco", img: "products/adidas-campo/ac0be76d.jpg" },
+      { name: "Copa Pure III Elite Laceless FG — Preto e Laranja",    img: "products/adidas-campo/ac1482f5.png" },
+      { name: "Copa Pure III Elite Laceless FG — Vermelho e Branco",  img: "products/adidas-campo/acfca00e.png" },
+      { name: "Copa Pure III Elite Laceless FG — Prata e Branco",     img: "products/adidas-campo/bbd9da13.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco, Laranja e Azul", img: "products/adidas-campo/cc6a0ce9.png" },
+      { name: "Copa Pure III Elite Laceless FG — Branco e Dourado",   img: "products/adidas-campo/d63a7117.png" },
+      { name: "Copa Pure III Elite FG — Preto e Vermelho",            img: "products/adidas-campo/e4818b03.png" },
     ] },
     mizuno: { brand: "MIZUNO", price: PRICE.campo, models: [
       { name: "Morelia Neo II Made in Japan FG — Branco e Dourado",         img: "products/mizuno-campo/0cd9ce30.jpg" },
@@ -1498,6 +1509,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Top Flex Rebound IN — Branco e Verde",  img: "products/joma-fs/topflex-23.png" },
       { name: "Top Flex Rebound IN — Branco e Preto",  img: "products/joma-fs/topflex-24.png" },
 
+      { name: "Top Flex Plus IN — Roxo e Verde",       img: "products/joma-fs/topflexplus-17.png" },
+
       { name: "Top Flex Plus IN — Verde e Rosa",       img: "products/joma-fs/topflexplus-01.png" },
       { name: "Top Flex Plus IN — Branco e Azul",      img: "products/joma-fs/topflexplus-02.png" },
       { name: "Top Flex Plus IN — Branco e Verde",     img: "products/joma-fs/topflexplus-03.png" },
@@ -1706,19 +1719,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ---- Novidades: vitrine com scroll horizontal, fora do sistema de abas ----
   const NOVIDADES_ITEMS = [
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Preto e Azul",       img: "products/nike-campo-vapor17/vapor17-01.jpg" },
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Dourado e Preto",    img: "products/nike-campo-vapor17/vapor17-06.jpg" },
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Preto",              img: "products/nike-campo-vapor17/vapor17-09.png" },
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Rosa e Roxo",        img: "products/nike-campo-vapor17/vapor17-13.jpg" },
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Laranja e Preto",    img: "products/nike-campo-vapor17/vapor17-17.jpg" },
-    { brand: "NIKE", model: "Mercurial Vapor 17 Elite FG", color: "Vermelho e Dourado", img: "products/nike-campo-vapor17/vapor17-19.png" }
+    { brand: "ADIDAS", model: "F50 Elite FG",                          color: "Verde e Azul",                 price: PRICE.campo,  img: "products/adidas-campo-f50/f50-16.png" },
+    { brand: "ADIDAS", model: "F50 Elite Laceless FG",                 color: "Verde e Azul",                 price: PRICE.campo,  img: "products/adidas-campo-f50/f50-17.png" },
+    { brand: "ADIDAS", model: "Predator Elite FG Foldover Tongue",     color: "Branco e Amarelo Neon",        price: PRICE.campo,  img: "products/adidas-campo-predator/predator-21.png" },
+    { brand: "ADIDAS", model: "Predator Elite FG Foldover Tongue",     color: "Amarelo Neon e Laranja",       price: PRICE.campo,  img: "products/adidas-campo-predator/predator-22.png" },
+    { brand: "ADIDAS", model: "Predator Elite FG Foldover Tongue",     color: "Preto, Branco e Vermelho",     price: PRICE.campo,  img: "products/adidas-campo-predator/predator-23.png" },
+    { brand: "ADIDAS", model: "Predator Elite FG Foldover Tongue",     color: "Azul, Branco e Vermelho",      price: PRICE.campo,  img: "products/adidas-campo-predator/predator-24.png" },
+    { brand: "JOMA",   model: "Top Flex Plus IN",                      color: "Roxo e Verde",                 price: PRICE.futsal, img: "products/joma-fs/topflexplus-17.png" }
   ];
   const novidadesScroll = document.getElementById('novidadesScroll');
   if (novidadesScroll) {
     NOVIDADES_ITEMS.forEach(item => {
       const id = `nv${PRODUCT_SEQ++}`;
       const fullName = `${item.model} — ${item.color}`;
-      const product = { id, brand: item.brand, model: fullName, color: item.color, fullName, price: PRICE.campo, img: item.img };
+      const product = { id, brand: item.brand, model: fullName, color: item.color, fullName, price: item.price, img: item.img };
       PRODUCT_INDEX[id] = product;
       const card = document.createElement('div');
       card.className = 'card';
@@ -1728,7 +1742,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <span class="brand-name">${item.brand}</span>
           <h3>${fullName}</h3>
           <div class="price-row card-actions">
-            <div class="price-col"><span class="price">R$ ${PRICE.campo}</span></div>
+            <div class="price-col"><span class="price">R$ ${item.price}</span></div>
             <button type="button" class="btn-add" data-add="${id}">+ Carrinho</button>
             <button type="button" class="btn-buy" data-buy="${id}">Comprar</button>
           </div>
