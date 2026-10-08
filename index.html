@@ -911,7 +911,7 @@
       <button data-cat="futsal">Futsal</button>
     </div>
 
-    <!-- CAMPO — R$ 449,99 -->
+    <!-- CAMPO — R$ 529,99 -->
     <div class="cat-panel" data-panel="campo">
       <div class="subtabs" role="tablist">
         <button class="active" data-sub="nike">Nike</button>
@@ -926,7 +926,7 @@
       <div class="product-grid" data-sub-panel="puma" style="display:none;"></div>
     </div>
 
-    <!-- SOCIETY — R$ 449,99 -->
+    <!-- SOCIETY — R$ 499,99 -->
     <div class="cat-panel" data-panel="society" style="display:none;">
       <div class="subtabs" role="tablist">
         <button class="active" data-sub="nike-so">Nike</button>
@@ -943,7 +943,7 @@
       <div class="product-grid" data-sub-panel="joma-so" style="display:none;"></div>
     </div>
 
-    <!-- FUTSAL — R$ 419,99 -->
+    <!-- FUTSAL — R$ 479,99 -->
     <div class="cat-panel" data-panel="futsal" style="display:none;">
       <div class="subtabs" role="tablist">
         <button class="active" data-sub="nike-fs">Nike</button>
@@ -984,7 +984,7 @@
     <div class="modal-info">
       <span class="brand-label" id="modalBrand">MIZUNO</span>
       <h2 id="modalName">Chuteira Campo</h2>
-      <div class="price-tag" id="modalPrice">R$ 699,99</div>
+      <div class="price-tag" id="modalPrice">R$ 529,99</div>
       
       <div class="size-section">
         <h3>Tamanho</h3>
@@ -1012,7 +1012,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // ---- Product data: swap "img" with a real photo path once you send the files ----
   const WHATS_NUM = "554891168661";
-  const PRICE = { campo: "449,99", society: "449,99", futsal: "419,99" };
+  const PRICE = { campo: "529,99", society: "499,99", futsal: "479,99" };
 
   const CATALOG = {
     nike: { brand: "NIKE", price: PRICE.campo, models: [
@@ -1227,6 +1227,16 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Copa Pure III Elite FG — Preto e Vermelho",            img: "products/adidas-campo/e4818b03.png" },
     ] },
     mizuno: { brand: "MIZUNO", price: PRICE.campo, models: [
+      { name: "Morelia Neo V Made in Japan FG — Preto, Amarelo e Coral", img: "products/mizuno-campo-neo5/neo5-01.png" },
+      { name: "Morelia Neo V Made in Japan FG — Branco, Amarelo e Coral", img: "products/mizuno-campo-neo5/neo5-02.png" },
+      { name: "Morelia Neo V Made in Japan FG — Preto e Vermelho", img: "products/mizuno-campo-neo5/neo5-03.png" },
+      { name: "Morelia Neo V Made in Japan FG — Coral", img: "products/mizuno-campo-neo5/neo5-04.png" },
+      { name: "Morelia Neo V Made in Japan FG — Branco, Preto e Vermelho", img: "products/mizuno-campo-neo5/neo5-05.png" },
+      { name: "Morelia Neo V Made in Japan FG — Preto, Amarelo e Coral", img: "products/mizuno-campo-neo5/neo5-06.png" },
+      { name: "Morelia Neo V Made in Japan FG — Branco, Amarelo e Laranja", img: "products/mizuno-campo-neo5/neo5-07.png" },
+      { name: "Morelia Neo V Made in Japan FG — Azul e Laranja", img: "products/mizuno-campo-neo5/neo5-08.png" },
+      { name: "Morelia Neo V Made in Japan FG — Azul, Rosa e Verde", img: "products/mizuno-campo-neo5/neo5-09.png" },
+      { name: "Morelia Neo V Made in Japan FG — Preto", img: "products/mizuno-campo-neo5/neo5-10.png" },
       { name: "Morelia Neo II Made in Japan FG — Branco e Dourado",         img: "products/mizuno-campo/0cd9ce30.jpg" },
       { name: "Morelia Neo II Made in Japan FG — Dourado e Preto",          img: "products/mizuno-campo/2bd3245f.jpg" },
       { name: "Morelia Neo II Made in Japan FG — Preto, Branco e Vermelho", img: "products/mizuno-campo/7ac34d65.jpg" },
@@ -1762,6 +1772,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ---- Novidades: vitrine com scroll horizontal, fora do sistema de abas ----
   const NOVIDADES_ITEMS = [
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Preto, Amarelo e Coral", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-01.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Branco, Amarelo e Coral", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-02.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Preto e Vermelho", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-03.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Coral", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-04.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Branco, Preto e Vermelho", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-05.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Preto, Amarelo e Coral", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-06.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Branco, Amarelo e Laranja", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-07.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Azul e Laranja", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-08.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Azul, Rosa e Verde", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-09.png" },
+    { brand: "MIZUNO", model: "Morelia Neo V Made in Japan FG", color: "Preto", price: PRICE.campo, img: "products/mizuno-campo-neo5/neo5-10.png" },
     { brand: "ADIDAS", model: "F50 Elite Laceless FG",                 color: "Verde e Azul",                 price: PRICE.campo,  img: "products/adidas-campo-f50/f50-16.png" },
     { brand: "ADIDAS", model: "F50 Elite FG",                          color: "Verde e Azul",                 price: PRICE.campo,  img: "products/adidas-campo-f50/f50-17.png" },
     { brand: "ADIDAS", model: "Predator Elite FG Foldover Tongue",     color: "Branco e Amarelo Neon",        price: PRICE.campo,  img: "products/adidas-campo-predator/predator-21.png" },
